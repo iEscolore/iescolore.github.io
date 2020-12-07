@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head><title>B@T</Title>
+<style type="text/css">
+
+.paplayer { color:black; background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzUiIGhlaWdodD0iNTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiA8Zz4KICA8dGl0bGU+UGFwTGF5ZXI8L3RpdGxlPgogIDx0ZXh0IHN0cm9rZT0iIzNmN2YwMCIgdHJhbnNmb3JtPSJtYXRyaXgoMC44NzE3NTgxNjI5NzUzMTEzLDAsMCwwLjU2MDA4NjI4Njg5MDUzMSwwLjEwMDE4ODkzNTE3NTUzODA2LDAuNzgwOTc2OTg0Mzg2MzQ2OSkgIiB4bWw6c3BhY2U9InByZXNlcnZlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtc2l6ZT0iMjQiIGlkPSJzdmdfMSIgeT0iMTguNTY3NzciIHg9IjIwLjMwMDE5IiBzdHJva2UtbGluZWNhcD0ibnVsbCIgc3Ryb2tlLWxpbmVqb2luPSJudWxsIiBzdHJva2UtZGFzaGFycmF5PSJudWxsIiBzdHJva2Utd2lkdGg9IjAiIGZpbGw9IiNmZjAwMDAiPnByaW88L3RleHQ+CiAgPHRleHQgaWQ9InN2Z18yIiBzdHJva2U9IiMzZjdmMDAiIHRyYW5zZm9ybT0ibWF0cml4KDAuNjI3MzEzNjkzMTc2NTc2LDAsMCwwLjUxOTUxNDg1NTY3NzUzOTYsNS4wMTA2MzgwOTk0NTAyNzEsMzcuNzI2NjY1NTk5MDc1NDcpICIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNlcmlmIiBmb250LXNpemU9IjI0IiB5PSIyMS43NjUyNCIgeD0iMTguNzg3MDQiIHN0cm9rZS1saW5lY2FwPSJudWxsIiBzdHJva2UtbGluZWpvaW49Im51bGwiIHN0cm9rZS1kYXNoYXJyYXk9Im51bGwiIHN0cm9rZS13aWR0aD0iMCIgZmlsbD0iIzNmN2YwMCI+VmVydGU8L3RleHQ+CiA8L2c+Cjwvc3ZnPg=='); }
+
+.logocolis{color:black; background-image:
+url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iMjIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogPG1ldGFkYXRhIGlkPSJtZXRhZGF0YTUiPmltYWdlL3N2Zyt4bWw8L21ldGFkYXRhPg0KIDxnPg0KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+DQogIDxnIHN0cm9rZT0ibnVsbCIgaWQ9ImxheWVyMSIvPg0KICA8ZyBzdHJva2U9Im51bGwiIGlkPSJzdmdfMiI+DQogICA8cGF0aCBzdHJva2U9IiMwMDAwMDAiIGZpbGw9IiNmZjY2MDAiIGZpbGwtb3BhY2l0eT0iMC43NSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2Utd2lkdGg9IjAuMTkzNzFweCIgaWQ9InBhdGg4NTkiIGQ9Im0yOS4zNTU3Niw1LjY5NjM0bDAsOS45NTcwOGw5LjY4NzgxLDQuOTkzNjJsOS45NywtNS40MDc5NmwtMC4xMjY5OSwtOS41NTEzOWwtOC40NjUwOCwzLjg4ODc1bDAuMTI2OTgsLTEuMjQzMDFsOC40NjUwOSwtMy44NjcxN2wtOS41NzQ5NSwtNC4wMDUyNmwtOS44MTQ4MSw0LjAzNTQ4bDkuNTM3MzMsNC4xMDAyM2wwLjE1MDUsMTAuMDk1MThsLTEuMjI3NDQsLTAuMDUxNzlsLTAuMTUwNDksLTkuMjE0NzJsLTguNTc3OTYsLTMuNzI5MDRsMCwtMC4wMDAwMXoiLz4NCiAgIDx0ZXh0IHN0cm9rZT0iIzAwMDAwMCIgdHJhbnNmb3JtPSJtYXRyaXgoMC4zMDMzNzMwNDc2MzcyMTkzNCwwLDAsMC4xOTQ5NTM3ODcwODE4NzY4MywxOC43MzA3NjkzMDM5NTQxMjMsMTQuMDY1MzczMzU0MzU5NTYzKSAiIHhtbDpzcGFjZT0icHJlc2VydmUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJzZXJpZiIgZm9udC1zaXplPSIyNCIgaWQ9InN2Z18xIiB5PSIzMy42NDMwNCIgeD0iLTIuMDc3NzciIHN0cm9rZS13aWR0aD0iMCIgZmlsbD0iIzAwMDAwMCI+Y29saXNzaW1vKHMpPC90ZXh0Pg0KICA8L2c+DQogPC9nPg0KPC9zdmc+'); }
+
+
+check {content:"&#9888;"; color:red; } 
+ [check="asNtel"] {before: "&#128222;" ; font-color:green;  }
+  
+input[type="radio"]:checked {opacity:1.00;}
+input[type="radio"]:not(:checked) {opacity:0.00;}
+input[type="radio"] + label{cursor:pointer;}
+.iLink {
+    display: block;
+    background: #4E9CAF;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+#BatZone {
+ position:absolute;top:185px;left:0px;z-index:1000;
+ border-color: red;
+ 
+ background-image: url('/BAT.jpg'); 
+ background-position: 0 0px; 
+ background-size: cover;
+ background-repeat:no-repeat;
+ width:840px;height:420px;
+ }
+#TheQrCode
+{ position:absolute;z-index:10000;height:180px;width:180px;top:200px;left:650px;border:1px solid;border-color:grey;background-color: white;overflow:hidden; 
+} 
+#TheQrCode img { margin:15px;}
+
+#imgBAT {
+object-fit: cover;
+object-position: 0 0;
+width:840px;height:420px;
+opacity :1;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: transparent;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: transparent;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: transparent;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: transparent;
+}
+:hover::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #999;
+}
+:hover::-moz-placeholder { /* Firefox 19+ */
+  color: #999;
+}
+:hover:-ms-input-placeholder { /* IE 10+ */
+  color: #999;
+}
+:hover:-moz-placeholder { /* Firefox 18- */
+  color: #999;
+}
+
+.transctrl {background: transparent !important;border:1px solid transparent;text-align:right;font-weight:bold;}
+.transinput { 
+margin:0;
+position:absolute;
+width:85px;height:20px;/*45*/
+background: transparent !important;
+font-size: 20px;
+font-weight:bold;
+text-align:right;
+border:1px solid transparent;
+}
+
+.QuantPrio { 
+margin:0;
+position:absolute;
+width:85px;height:20px;/*45*/
+background: transparent !important;
+font-size: 20px;
+color:firebrick;
+font-weight:bold;
+text-align:right;
+border:1px solid transparent;
+}
+
+.QuantLv { 
+margin:0;
+position:absolute;
+width:85px;height:20px;/*45*/
+background: transparent !important;
+color:darkgreen;
+font-size: 20px;
+font-weight:bold;
+text-align:right;
+border:1px solid transparent;
+}
+.QuantSup {
+background: transparent !important;
+color:black;
+text-align:right;
+border:1px solid transparent;
+}
+
+.euros {font-family: Arial;}
+.gramme{font-family: Arial;}
+
+select:focus, input:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px #61C5FA;
+    border:1px solid #5AB0DB;
+	background-color:yellow;
+	font-weight: bold;
+	
+}
+
+select:hover,input:hover,input[type="radio"]:hover+label {
+       border-radius: 5px;
+	   border:2px solid #FFA500;
+	}
+
+
+select:focus:hover, input:focus:hover{
+    outline: none;
+    box-shadow: 0px 0px 5px #76FF03;
+    border:1px solid #5AB0DB;
+    border-radius:0;
+	}
+
+@page {
+size:A4 landscape;
+margin:0;
+box-shadow: 0;
+
+}
+@media screen {
+	body, page[size='A4'] {
+			margin: 0;
+			box-shadow: 0;}
+	}
+
+@media print {
+	body, page[size='A4'] {	margin: 0;box-shadow: 0;}
+	background: transparent !important;
+
+}
+
+.Red {font-color:red;}
+.Green {font-color:green;}
+.mini{font-size:xx-small;}
+.TxtCase {
+	font-size: xx-small;
+	line-height: 1.6em ;
+	display: table-cell;
+    text-align: justify;
+	color:Dark-Gray;
+	}
+.Warning{color:red;}
+.Ok{color:green}	
+.TTC::after {
+ content:" €ttc";
+ text-align: right;
+ color:gray;
+}	
+.SVGBKG
+{ align-content :space-around;
+}
+.SvgEuroTtc {
+align-content :right;
+
+}
+
+table, th, td {
+border-collapse: collapse;
+border: 1px solid lightgrey;
+padding:0px;
+}
+
+.LineForm {
+left:0;
+width:100%;
+height:23px;
+background-color:lightgrey;
+}	
+
+tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip-bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent;
+}
+.tooltip-left::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #555;
+}
+.tooltip-top::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+.tooltip-right::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #555 transparent transparent;
+}
+</style>
+<script credit="https://davidshimjs.github.io/qrcodejs/">
+var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this.parsedData=[];for(var b=[],d=0,e=this.data.length;e>d;d++){var f=this.data.charCodeAt(d);f>65536?(b[0]=240|(1835008&f)>>>18,b[1]=128|(258048&f)>>>12,b[2]=128|(4032&f)>>>6,b[3]=128|63&f):f>2048?(b[0]=224|(61440&f)>>>12,b[1]=128|(4032&f)>>>6,b[2]=128|63&f):f>128?(b[0]=192|(1984&f)>>>6,b[1]=128|63&f):b[0]=f,this.parsedData=this.parsedData.concat(b)}this.parsedData.length!=this.data.length&&(this.parsedData.unshift(191),this.parsedData.unshift(187),this.parsedData.unshift(239))}function b(a,b){this.typeNumber=a,this.errorCorrectLevel=b,this.modules=null,this.moduleCount=0,this.dataCache=null,this.dataList=[]}function i(a,b){if(void 0==a.length)throw new Error(a.length+"/"+b);for(var c=0;c<a.length&&0==a[c];)c++;this.num=new Array(a.length-c+b);for(var d=0;d<a.length-c;d++)this.num[d]=a[d+c]}function j(a,b){this.totalCount=a,this.dataCount=b}function k(){this.buffer=[],this.length=0}function m(){return"undefined"!=typeof CanvasRenderingContext2D}function n(){var a=!1,b=navigator.userAgent;return/android/i.test(b)&&(a=!0,aMat=b.toString().match(/android ([0-9]\.[0-9])/i),aMat&&aMat[1]&&(a=parseFloat(aMat[1]))),a}function r(a,b){for(var c=1,e=s(a),f=0,g=l.length;g>=f;f++){var h=0;switch(b){case d.L:h=l[f][0];break;case d.M:h=l[f][1];break;case d.Q:h=l[f][2];break;case d.H:h=l[f][3]}if(h>=e)break;c++}if(c>l.length)throw new Error("Too long data");return c}function s(a){var b=encodeURI(a).toString().replace(/\%[0-9a-fA-F]{2}/g,"a");return b.length+(b.length!=a?3:0)}a.prototype={getLength:function(){return this.parsedData.length},write:function(a){for(var b=0,c=this.parsedData.length;c>b;b++)a.put(this.parsedData[b],8)}},b.prototype={addData:function(b){var c=new a(b);this.dataList.push(c),this.dataCache=null},isDark:function(a,b){if(0>a||this.moduleCount<=a||0>b||this.moduleCount<=b)throw new Error(a+","+b);return this.modules[a][b]},getModuleCount:function(){return this.moduleCount},make:function(){this.makeImpl(!1,this.getBestMaskPattern())},makeImpl:function(a,c){this.moduleCount=4*this.typeNumber+17,this.modules=new Array(this.moduleCount);for(var d=0;d<this.moduleCount;d++){this.modules[d]=new Array(this.moduleCount);for(var e=0;e<this.moduleCount;e++)this.modules[d][e]=null}this.setupPositionProbePattern(0,0),this.setupPositionProbePattern(this.moduleCount-7,0),this.setupPositionProbePattern(0,this.moduleCount-7),this.setupPositionAdjustPattern(),this.setupTimingPattern(),this.setupTypeInfo(a,c),this.typeNumber>=7&&this.setupTypeNumber(a),null==this.dataCache&&(this.dataCache=b.createData(this.typeNumber,this.errorCorrectLevel,this.dataList)),this.mapData(this.dataCache,c)},setupPositionProbePattern:function(a,b){for(var c=-1;7>=c;c++)if(!(-1>=a+c||this.moduleCount<=a+c))for(var d=-1;7>=d;d++)-1>=b+d||this.moduleCount<=b+d||(this.modules[a+c][b+d]=c>=0&&6>=c&&(0==d||6==d)||d>=0&&6>=d&&(0==c||6==c)||c>=2&&4>=c&&d>=2&&4>=d?!0:!1)},getBestMaskPattern:function(){for(var a=0,b=0,c=0;8>c;c++){this.makeImpl(!0,c);var d=f.getLostPoint(this);(0==c||a>d)&&(a=d,b=c)}return b},createMovieClip:function(a,b,c){var d=a.createEmptyMovieClip(b,c),e=1;this.make();for(var f=0;f<this.modules.length;f++)for(var g=f*e,h=0;h<this.modules[f].length;h++){var i=h*e,j=this.modules[f][h];j&&(d.beginFill(0,100),d.moveTo(i,g),d.lineTo(i+e,g),d.lineTo(i+e,g+e),d.lineTo(i,g+e),d.endFill())}return d},setupTimingPattern:function(){for(var a=8;a<this.moduleCount-8;a++)null==this.modules[a][6]&&(this.modules[a][6]=0==a%2);for(var b=8;b<this.moduleCount-8;b++)null==this.modules[6][b]&&(this.modules[6][b]=0==b%2)},setupPositionAdjustPattern:function(){for(var a=f.getPatternPosition(this.typeNumber),b=0;b<a.length;b++)for(var c=0;c<a.length;c++){var d=a[b],e=a[c];if(null==this.modules[d][e])for(var g=-2;2>=g;g++)for(var h=-2;2>=h;h++)this.modules[d+g][e+h]=-2==g||2==g||-2==h||2==h||0==g&&0==h?!0:!1}},setupTypeNumber:function(a){for(var b=f.getBCHTypeNumber(this.typeNumber),c=0;18>c;c++){var d=!a&&1==(1&b>>c);this.modules[Math.floor(c/3)][c%3+this.moduleCount-8-3]=d}for(var c=0;18>c;c++){var d=!a&&1==(1&b>>c);this.modules[c%3+this.moduleCount-8-3][Math.floor(c/3)]=d}},setupTypeInfo:function(a,b){for(var c=this.errorCorrectLevel<<3|b,d=f.getBCHTypeInfo(c),e=0;15>e;e++){var g=!a&&1==(1&d>>e);6>e?this.modules[e][8]=g:8>e?this.modules[e+1][8]=g:this.modules[this.moduleCount-15+e][8]=g}for(var e=0;15>e;e++){var g=!a&&1==(1&d>>e);8>e?this.modules[8][this.moduleCount-e-1]=g:9>e?this.modules[8][15-e-1+1]=g:this.modules[8][15-e-1]=g}this.modules[this.moduleCount-8][8]=!a},mapData:function(a,b){for(var c=-1,d=this.moduleCount-1,e=7,g=0,h=this.moduleCount-1;h>0;h-=2)for(6==h&&h--;;){for(var i=0;2>i;i++)if(null==this.modules[d][h-i]){var j=!1;g<a.length&&(j=1==(1&a[g]>>>e));var k=f.getMask(b,d,h-i);k&&(j=!j),this.modules[d][h-i]=j,e--,-1==e&&(g++,e=7)}if(d+=c,0>d||this.moduleCount<=d){d-=c,c=-c;break}}}},b.PAD0=236,b.PAD1=17,b.createData=function(a,c,d){for(var e=j.getRSBlocks(a,c),g=new k,h=0;h<d.length;h++){var i=d[h];g.put(i.mode,4),g.put(i.getLength(),f.getLengthInBits(i.mode,a)),i.write(g)}for(var l=0,h=0;h<e.length;h++)l+=e[h].dataCount;if(g.getLengthInBits()>8*l)throw new Error("code length overflow. ("+g.getLengthInBits()+">"+8*l+")");for(g.getLengthInBits()+4<=8*l&&g.put(0,4);0!=g.getLengthInBits()%8;)g.putBit(!1);for(;;){if(g.getLengthInBits()>=8*l)break;if(g.put(b.PAD0,8),g.getLengthInBits()>=8*l)break;g.put(b.PAD1,8)}return b.createBytes(g,e)},b.createBytes=function(a,b){for(var c=0,d=0,e=0,g=new Array(b.length),h=new Array(b.length),j=0;j<b.length;j++){var k=b[j].dataCount,l=b[j].totalCount-k;d=Math.max(d,k),e=Math.max(e,l),g[j]=new Array(k);for(var m=0;m<g[j].length;m++)g[j][m]=255&a.buffer[m+c];c+=k;var n=f.getErrorCorrectPolynomial(l),o=new i(g[j],n.getLength()-1),p=o.mod(n);h[j]=new Array(n.getLength()-1);for(var m=0;m<h[j].length;m++){var q=m+p.getLength()-h[j].length;h[j][m]=q>=0?p.get(q):0}}for(var r=0,m=0;m<b.length;m++)r+=b[m].totalCount;for(var s=new Array(r),t=0,m=0;d>m;m++)for(var j=0;j<b.length;j++)m<g[j].length&&(s[t++]=g[j][m]);for(var m=0;e>m;m++)for(var j=0;j<b.length;j++)m<h[j].length&&(s[t++]=h[j][m]);return s};for(var c={MODE_NUMBER:1,MODE_ALPHA_NUM:2,MODE_8BIT_BYTE:4,MODE_KANJI:8},d={L:1,M:0,Q:3,H:2},e={PATTERN000:0,PATTERN001:1,PATTERN010:2,PATTERN011:3,PATTERN100:4,PATTERN101:5,PATTERN110:6,PATTERN111:7},f={PATTERN_POSITION_TABLE:[[],[6,18],[6,22],[6,26],[6,30],[6,34],[6,22,38],[6,24,42],[6,26,46],[6,28,50],[6,30,54],[6,32,58],[6,34,62],[6,26,46,66],[6,26,48,70],[6,26,50,74],[6,30,54,78],[6,30,56,82],[6,30,58,86],[6,34,62,90],[6,28,50,72,94],[6,26,50,74,98],[6,30,54,78,102],[6,28,54,80,106],[6,32,58,84,110],[6,30,58,86,114],[6,34,62,90,118],[6,26,50,74,98,122],[6,30,54,78,102,126],[6,26,52,78,104,130],[6,30,56,82,108,134],[6,34,60,86,112,138],[6,30,58,86,114,142],[6,34,62,90,118,146],[6,30,54,78,102,126,150],[6,24,50,76,102,128,154],[6,28,54,80,106,132,158],[6,32,58,84,110,136,162],[6,26,54,82,110,138,166],[6,30,58,86,114,142,170]],G15:1335,G18:7973,G15_MASK:21522,getBCHTypeInfo:function(a){for(var b=a<<10;f.getBCHDigit(b)-f.getBCHDigit(f.G15)>=0;)b^=f.G15<<f.getBCHDigit(b)-f.getBCHDigit(f.G15);return(a<<10|b)^f.G15_MASK},getBCHTypeNumber:function(a){for(var b=a<<12;f.getBCHDigit(b)-f.getBCHDigit(f.G18)>=0;)b^=f.G18<<f.getBCHDigit(b)-f.getBCHDigit(f.G18);return a<<12|b},getBCHDigit:function(a){for(var b=0;0!=a;)b++,a>>>=1;return b},getPatternPosition:function(a){return f.PATTERN_POSITION_TABLE[a-1]},getMask:function(a,b,c){switch(a){case e.PATTERN000:return 0==(b+c)%2;case e.PATTERN001:return 0==b%2;case e.PATTERN010:return 0==c%3;case e.PATTERN011:return 0==(b+c)%3;case e.PATTERN100:return 0==(Math.floor(b/2)+Math.floor(c/3))%2;case e.PATTERN101:return 0==b*c%2+b*c%3;case e.PATTERN110:return 0==(b*c%2+b*c%3)%2;case e.PATTERN111:return 0==(b*c%3+(b+c)%2)%2;default:throw new Error("bad maskPattern:"+a)}},getErrorCorrectPolynomial:function(a){for(var b=new i([1],0),c=0;a>c;c++)b=b.multiply(new i([1,g.gexp(c)],0));return b},getLengthInBits:function(a,b){if(b>=1&&10>b)switch(a){case c.MODE_NUMBER:return 10;case c.MODE_ALPHA_NUM:return 9;case c.MODE_8BIT_BYTE:return 8;case c.MODE_KANJI:return 8;default:throw new Error("mode:"+a)}else if(27>b)switch(a){case c.MODE_NUMBER:return 12;case c.MODE_ALPHA_NUM:return 11;case c.MODE_8BIT_BYTE:return 16;case c.MODE_KANJI:return 10;default:throw new Error("mode:"+a)}else{if(!(41>b))throw new Error("type:"+b);switch(a){case c.MODE_NUMBER:return 14;case c.MODE_ALPHA_NUM:return 13;case c.MODE_8BIT_BYTE:return 16;case c.MODE_KANJI:return 12;default:throw new Error("mode:"+a)}}},getLostPoint:function(a){for(var b=a.getModuleCount(),c=0,d=0;b>d;d++)for(var e=0;b>e;e++){for(var f=0,g=a.isDark(d,e),h=-1;1>=h;h++)if(!(0>d+h||d+h>=b))for(var i=-1;1>=i;i++)0>e+i||e+i>=b||(0!=h||0!=i)&&g==a.isDark(d+h,e+i)&&f++;f>5&&(c+=3+f-5)}for(var d=0;b-1>d;d++)for(var e=0;b-1>e;e++){var j=0;a.isDark(d,e)&&j++,a.isDark(d+1,e)&&j++,a.isDark(d,e+1)&&j++,a.isDark(d+1,e+1)&&j++,(0==j||4==j)&&(c+=3)}for(var d=0;b>d;d++)for(var e=0;b-6>e;e++)a.isDark(d,e)&&!a.isDark(d,e+1)&&a.isDark(d,e+2)&&a.isDark(d,e+3)&&a.isDark(d,e+4)&&!a.isDark(d,e+5)&&a.isDark(d,e+6)&&(c+=40);for(var e=0;b>e;e++)for(var d=0;b-6>d;d++)a.isDark(d,e)&&!a.isDark(d+1,e)&&a.isDark(d+2,e)&&a.isDark(d+3,e)&&a.isDark(d+4,e)&&!a.isDark(d+5,e)&&a.isDark(d+6,e)&&(c+=40);for(var k=0,e=0;b>e;e++)for(var d=0;b>d;d++)a.isDark(d,e)&&k++;var l=Math.abs(100*k/b/b-50)/5;return c+=10*l}},g={glog:function(a){if(1>a)throw new Error("glog("+a+")");return g.LOG_TABLE[a]},gexp:function(a){for(;0>a;)a+=255;for(;a>=256;)a-=255;return g.EXP_TABLE[a]},EXP_TABLE:new Array(256),LOG_TABLE:new Array(256)},h=0;8>h;h++)g.EXP_TABLE[h]=1<<h;for(var h=8;256>h;h++)g.EXP_TABLE[h]=g.EXP_TABLE[h-4]^g.EXP_TABLE[h-5]^g.EXP_TABLE[h-6]^g.EXP_TABLE[h-8];for(var h=0;255>h;h++)g.LOG_TABLE[g.EXP_TABLE[h]]=h;i.prototype={get:function(a){return this.num[a]},getLength:function(){return this.num.length},multiply:function(a){for(var b=new Array(this.getLength()+a.getLength()-1),c=0;c<this.getLength();c++)for(var d=0;d<a.getLength();d++)b[c+d]^=g.gexp(g.glog(this.get(c))+g.glog(a.get(d)));return new i(b,0)},mod:function(a){if(this.getLength()-a.getLength()<0)return this;for(var b=g.glog(this.get(0))-g.glog(a.get(0)),c=new Array(this.getLength()),d=0;d<this.getLength();d++)c[d]=this.get(d);for(var d=0;d<a.getLength();d++)c[d]^=g.gexp(g.glog(a.get(d))+b);return new i(c,0).mod(a)}},j.RS_BLOCK_TABLE=[[1,26,19],[1,26,16],[1,26,13],[1,26,9],[1,44,34],[1,44,28],[1,44,22],[1,44,16],[1,70,55],[1,70,44],[2,35,17],[2,35,13],[1,100,80],[2,50,32],[2,50,24],[4,25,9],[1,134,108],[2,67,43],[2,33,15,2,34,16],[2,33,11,2,34,12],[2,86,68],[4,43,27],[4,43,19],[4,43,15],[2,98,78],[4,49,31],[2,32,14,4,33,15],[4,39,13,1,40,14],[2,121,97],[2,60,38,2,61,39],[4,40,18,2,41,19],[4,40,14,2,41,15],[2,146,116],[3,58,36,2,59,37],[4,36,16,4,37,17],[4,36,12,4,37,13],[2,86,68,2,87,69],[4,69,43,1,70,44],[6,43,19,2,44,20],[6,43,15,2,44,16],[4,101,81],[1,80,50,4,81,51],[4,50,22,4,51,23],[3,36,12,8,37,13],[2,116,92,2,117,93],[6,58,36,2,59,37],[4,46,20,6,47,21],[7,42,14,4,43,15],[4,133,107],[8,59,37,1,60,38],[8,44,20,4,45,21],[12,33,11,4,34,12],[3,145,115,1,146,116],[4,64,40,5,65,41],[11,36,16,5,37,17],[11,36,12,5,37,13],[5,109,87,1,110,88],[5,65,41,5,66,42],[5,54,24,7,55,25],[11,36,12],[5,122,98,1,123,99],[7,73,45,3,74,46],[15,43,19,2,44,20],[3,45,15,13,46,16],[1,135,107,5,136,108],[10,74,46,1,75,47],[1,50,22,15,51,23],[2,42,14,17,43,15],[5,150,120,1,151,121],[9,69,43,4,70,44],[17,50,22,1,51,23],[2,42,14,19,43,15],[3,141,113,4,142,114],[3,70,44,11,71,45],[17,47,21,4,48,22],[9,39,13,16,40,14],[3,135,107,5,136,108],[3,67,41,13,68,42],[15,54,24,5,55,25],[15,43,15,10,44,16],[4,144,116,4,145,117],[17,68,42],[17,50,22,6,51,23],[19,46,16,6,47,17],[2,139,111,7,140,112],[17,74,46],[7,54,24,16,55,25],[34,37,13],[4,151,121,5,152,122],[4,75,47,14,76,48],[11,54,24,14,55,25],[16,45,15,14,46,16],[6,147,117,4,148,118],[6,73,45,14,74,46],[11,54,24,16,55,25],[30,46,16,2,47,17],[8,132,106,4,133,107],[8,75,47,13,76,48],[7,54,24,22,55,25],[22,45,15,13,46,16],[10,142,114,2,143,115],[19,74,46,4,75,47],[28,50,22,6,51,23],[33,46,16,4,47,17],[8,152,122,4,153,123],[22,73,45,3,74,46],[8,53,23,26,54,24],[12,45,15,28,46,16],[3,147,117,10,148,118],[3,73,45,23,74,46],[4,54,24,31,55,25],[11,45,15,31,46,16],[7,146,116,7,147,117],[21,73,45,7,74,46],[1,53,23,37,54,24],[19,45,15,26,46,16],[5,145,115,10,146,116],[19,75,47,10,76,48],[15,54,24,25,55,25],[23,45,15,25,46,16],[13,145,115,3,146,116],[2,74,46,29,75,47],[42,54,24,1,55,25],[23,45,15,28,46,16],[17,145,115],[10,74,46,23,75,47],[10,54,24,35,55,25],[19,45,15,35,46,16],[17,145,115,1,146,116],[14,74,46,21,75,47],[29,54,24,19,55,25],[11,45,15,46,46,16],[13,145,115,6,146,116],[14,74,46,23,75,47],[44,54,24,7,55,25],[59,46,16,1,47,17],[12,151,121,7,152,122],[12,75,47,26,76,48],[39,54,24,14,55,25],[22,45,15,41,46,16],[6,151,121,14,152,122],[6,75,47,34,76,48],[46,54,24,10,55,25],[2,45,15,64,46,16],[17,152,122,4,153,123],[29,74,46,14,75,47],[49,54,24,10,55,25],[24,45,15,46,46,16],[4,152,122,18,153,123],[13,74,46,32,75,47],[48,54,24,14,55,25],[42,45,15,32,46,16],[20,147,117,4,148,118],[40,75,47,7,76,48],[43,54,24,22,55,25],[10,45,15,67,46,16],[19,148,118,6,149,119],[18,75,47,31,76,48],[34,54,24,34,55,25],[20,45,15,61,46,16]],j.getRSBlocks=function(a,b){var c=j.getRsBlockTable(a,b);if(void 0==c)throw new Error("bad rs block @ typeNumber:"+a+"/errorCorrectLevel:"+b);for(var d=c.length/3,e=[],f=0;d>f;f++)for(var g=c[3*f+0],h=c[3*f+1],i=c[3*f+2],k=0;g>k;k++)e.push(new j(h,i));return e},j.getRsBlockTable=function(a,b){switch(b){case d.L:return j.RS_BLOCK_TABLE[4*(a-1)+0];case d.M:return j.RS_BLOCK_TABLE[4*(a-1)+1];case d.Q:return j.RS_BLOCK_TABLE[4*(a-1)+2];case d.H:return j.RS_BLOCK_TABLE[4*(a-1)+3];default:return void 0}},k.prototype={get:function(a){var b=Math.floor(a/8);return 1==(1&this.buffer[b]>>>7-a%8)},put:function(a,b){for(var c=0;b>c;c++)this.putBit(1==(1&a>>>b-c-1))},getLengthInBits:function(){return this.length},putBit:function(a){var b=Math.floor(this.length/8);this.buffer.length<=b&&this.buffer.push(0),a&&(this.buffer[b]|=128>>>this.length%8),this.length++}};var l=[[17,14,11,7],[32,26,20,14],[53,42,32,24],[78,62,46,34],[106,84,60,44],[134,106,74,58],[154,122,86,64],[192,152,108,84],[230,180,130,98],[271,213,151,119],[321,251,177,137],[367,287,203,155],[425,331,241,177],[458,362,258,194],[520,412,292,220],[586,450,322,250],[644,504,364,280],[718,560,394,310],[792,624,442,338],[858,666,482,382],[929,711,509,403],[1003,779,565,439],[1091,857,611,461],[1171,911,661,511],[1273,997,715,535],[1367,1059,751,593],[1465,1125,805,625],[1528,1190,868,658],[1628,1264,908,698],[1732,1370,982,742],[1840,1452,1030,790],[1952,1538,1112,842],[2068,1628,1168,898],[2188,1722,1228,958],[2303,1809,1283,983],[2431,1911,1351,1051],[2563,1989,1423,1093],[2699,2099,1499,1139],[2809,2213,1579,1219],[2953,2331,1663,1273]],o=function(){var a=function(a,b){this._el=a,this._htOption=b};return a.prototype.draw=function(a){function g(a,b){var c=document.createElementNS("http://www.w3.org/2000/svg",a);for(var d in b)b.hasOwnProperty(d)&&c.setAttribute(d,b[d]);return c}var b=this._htOption,c=this._el,d=a.getModuleCount();Math.floor(b.width/d),Math.floor(b.height/d),this.clear();var h=g("svg",{viewBox:"0 0 "+String(d)+" "+String(d),width:"100%",height:"100%",fill:b.colorLight});h.setAttributeNS("http://www.w3.org/2000/xmlns/","xmlns:xlink","http://www.w3.org/1999/xlink"),c.appendChild(h),h.appendChild(g("rect",{fill:b.colorDark,width:"1",height:"1",id:"template"}));for(var i=0;d>i;i++)for(var j=0;d>j;j++)if(a.isDark(i,j)){var k=g("use",{x:String(i),y:String(j)});k.setAttributeNS("http://www.w3.org/1999/xlink","href","#template"),h.appendChild(k)}},a.prototype.clear=function(){for(;this._el.hasChildNodes();)this._el.removeChild(this._el.lastChild)},a}(),p="svg"===document.documentElement.tagName.toLowerCase(),q=p?o:m()?function(){function a(){this._elImage.src=this._elCanvas.toDataURL("image/png"),this._elImage.style.display="block",this._elCanvas.style.display="none"}function d(a,b){var c=this;if(c._fFail=b,c._fSuccess=a,null===c._bSupportDataURI){var d=document.createElement("img"),e=function(){c._bSupportDataURI=!1,c._fFail&&_fFail.call(c)},f=function(){c._bSupportDataURI=!0,c._fSuccess&&c._fSuccess.call(c)};return d.onabort=e,d.onerror=e,d.onload=f,d.src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==",void 0}c._bSupportDataURI===!0&&c._fSuccess?c._fSuccess.call(c):c._bSupportDataURI===!1&&c._fFail&&c._fFail.call(c)}if(this._android&&this._android<=2.1){var b=1/window.devicePixelRatio,c=CanvasRenderingContext2D.prototype.drawImage;CanvasRenderingContext2D.prototype.drawImage=function(a,d,e,f,g,h,i,j){if("nodeName"in a&&/img/i.test(a.nodeName))for(var l=arguments.length-1;l>=1;l--)arguments[l]=arguments[l]*b;else"undefined"==typeof j&&(arguments[1]*=b,arguments[2]*=b,arguments[3]*=b,arguments[4]*=b);c.apply(this,arguments)}}var e=function(a,b){this._bIsPainted=!1,this._android=n(),this._htOption=b,this._elCanvas=document.createElement("canvas"),this._elCanvas.width=b.width,this._elCanvas.height=b.height,a.appendChild(this._elCanvas),this._el=a,this._oContext=this._elCanvas.getContext("2d"),this._bIsPainted=!1,this._elImage=document.createElement("img"),this._elImage.style.display="none",this._el.appendChild(this._elImage),this._bSupportDataURI=null};return e.prototype.draw=function(a){var b=this._elImage,c=this._oContext,d=this._htOption,e=a.getModuleCount(),f=d.width/e,g=d.height/e,h=Math.round(f),i=Math.round(g);b.style.display="none",this.clear();for(var j=0;e>j;j++)for(var k=0;e>k;k++){var l=a.isDark(j,k),m=k*f,n=j*g;c.strokeStyle=l?d.colorDark:d.colorLight,c.lineWidth=1,c.fillStyle=l?d.colorDark:d.colorLight,c.fillRect(m,n,f,g),c.strokeRect(Math.floor(m)+.5,Math.floor(n)+.5,h,i),c.strokeRect(Math.ceil(m)-.5,Math.ceil(n)-.5,h,i)}this._bIsPainted=!0},e.prototype.makeImage=function(){this._bIsPainted&&d.call(this,a)},e.prototype.isPainted=function(){return this._bIsPainted},e.prototype.clear=function(){this._oContext.clearRect(0,0,this._elCanvas.width,this._elCanvas.height),this._bIsPainted=!1},e.prototype.round=function(a){return a?Math.floor(1e3*a)/1e3:a},e}():function(){var a=function(a,b){this._el=a,this._htOption=b};return a.prototype.draw=function(a){for(var b=this._htOption,c=this._el,d=a.getModuleCount(),e=Math.floor(b.width/d),f=Math.floor(b.height/d),g=['<table style="border:0;border-collapse:collapse;">'],h=0;d>h;h++){g.push("<tr>");for(var i=0;d>i;i++)g.push('<td style="border:0;border-collapse:collapse;padding:0;margin:0;width:'+e+"px;height:"+f+"px;background-color:"+(a.isDark(h,i)?b.colorDark:b.colorLight)+';"></td>');g.push("</tr>")}g.push("</table>"),c.innerHTML=g.join("");var j=c.childNodes[0],k=(b.width-j.offsetWidth)/2,l=(b.height-j.offsetHeight)/2;k>0&&l>0&&(j.style.margin=l+"px "+k+"px")},a.prototype.clear=function(){this._el.innerHTML=""},a}();QRCode=function(a,b){if(this._htOption={width:256,height:256,typeNumber:4,colorDark:"#000000",colorLight:"#ffffff",correctLevel:d.H},"string"==typeof b&&(b={text:b}),b)for(var c in b)this._htOption[c]=b[c];"string"==typeof a&&(a=document.getElementById(a)),this._android=n(),this._el=a,this._oQRCode=null,this._oDrawing=new q(this._el,this._htOption),this._htOption.text&&this.makeCode(this._htOption.text)},QRCode.prototype.makeCode=function(a){this._oQRCode=new b(r(a,this._htOption.correctLevel),this._htOption.correctLevel),this._oQRCode.addData(a),this._oQRCode.make(),this._el.title=a,this._oDrawing.draw(this._oQRCode),this.makeImage()},QRCode.prototype.makeImage=function(){"function"==typeof this._oDrawing.makeImage&&(!this._android||this._android>=3)&&this._oDrawing.makeImage()},QRCode.prototype.clear=function(){this._oDrawing.clear()},QRCode.CorrectLevel=d}();
+</script>
+<script>
+ var PrixPersoEnv = {"NOIR":"NOIR","MONOR":"ROUGE","MONOB":"BLEU","MONOV":"VERT","MONOS":"SEPIA","QUADRI":"QUADRI"};
+ var OptionsList = { "MisEnOeuvre": "" , "ForInf20€" : "Forfait Infographie: +20€ttc" };
+ var Fournitures = new Array ("","DL Client","C5 Client","C4 Client", "DLSF.0175€","DLAF.0186€", "C5AF.0297€","C5SF.0261€","C4AF.0842€","C4SF.0821€");
+ var PoidsFournit ={ "DL":".0044","C5":"0.0071","C4":"0.0131","A480g":"0.0050"};
+ var AssureColissimo=[[150,.9],[300,1.80 ],[500,3],[1000,6],[2000,12],[5000,30]];
+
+ var TarifColissimo=[
+[0.25,5.67,6.67,4.47],
+[0.50,6.39,7.39,5.19],
+[0.75,7.14,8.14,5.94],
+[1.00,7.75,8.75,6.55],
+[2.00,8.60,9.60,7.40],
+[3.00,9.44,10.44,8.24],
+[4.00,10.29,11.29,9.09],
+[5.00,11.13,12.13,9.93],
+[6.00,11.99,12.99,10.79],
+[7.00,12.83,13.83,11.63],
+[8.00,13.66,14.66,12.46],
+[9.00,14.52,15.52,13.32],
+[10.00,15.37,16.37,14.17],
+[11.00,16.22,17.22,15.02],
+[12.00,17.06,18.06,15.86],
+[13.00,17.90,18.90,16.70],
+[14.00,18.76,19.76,17.56],
+[15.00,19.60,20.60,18.40],
+[16.00,20.45,21.45,19.25],
+[17.00,21.29,22.29,20.09],
+[18.00,22.13,23.13,20.93],
+[19.00,22.99,23.99,21.79],
+[20.00,23.82,24.82,22.62],
+[21.00,24.68,25.68,23.48],
+[22.00,25.52,26.52,24.32],
+[23.00,26.37,27.37,25.17],
+[24.00,27.22,28.22,26.02],
+[25.00,28.05,29.05,26.85],
+[26.00,28.91,29.91,27.71],
+[27.00,29.75,30.75,28.55],
+[28.00,30.60,31.60,29.40],
+[29.00,31.46,32.46,30.26],
+[30.00,32.28,33.28,31.08]
+];
+
+</script>
+<!--idée="servir une version NOTES_NIF.js depuis iprint/Notes"-->
+<script  oldsrc="http://iprint/USERS/IPRINT/NOTES_NIF.js">
+//Xinix_JScirpt_Object :/ depending Users
+var NOTES = NOTES || {
+"INFOS" : { "NAME" : "URGENCES MAIN AUVERGNE (CHIRURGIE)","COLOR" : "QUADRI","FACE" : "RECTO","SECTIONS" : "","STATUS" : "MODIF","ALTER" : "URGENCES_MAIN_AUVERGNE_CHIRURGIE_","BAT_VIA" : "20/10/2015 16:18:40 SERVICE","NUIC" : "#D2270-9" },
+"CONTACT" : { "TEL" : "04 73 40 80 41","NAME" : " Séverine MONTEIRO","FACTURER_A" : "CCCHLMS Chirurgiens","ID" : "0000000035","TYPE" : "LAPOSTE","TITRE" : "Mme","PRENOM" : "Séverine","NOM" : "MONTEIRO","MOB" : "06 67 51 28 53 ","MEL" : "","REM" : "COURNON","GEOLOC" : "000033","Lieu" : "La poste Cournon","ADRESSE" : "16 Place des Dômes","ADRESSE_PLUS" : "","CODEPOSTAL" : "63800","VILLE" : "Cournon","Cedex_Pays" : "","Latitude" : "Latitude:","Longitude" : "Longitude:","CP_VILLE" : "63170 AUBIERE" },
+"NOTES" : { "EXTEND@" : "http://cao/Nif/EXTEND.nif " },
+"SECTIONS" : { "INFOS" : "Informations Générale ","CONTACT" : "les Infos sur le contact à la poste par ex.","CLIENT" : "Les Infos sur le Client","NOTES" : "Section d'appelle d'Extentions","SECTIONS" : "details","ID" : "Altername=Name","CONTACT_LIST" : "Liste des contacts","SIGNALS_RECEPT" : "Section des signaux reçus","URGENCES_MAIN_AUVERGNE_CHIRURGIE_" : "Section Alternantive (pour Modif)" },
+"ID" : { "URGENCES_MAIN_AUVERGNE_CHIRURGIE_" : "URGENCES MAIN AUVERGNE (CHIRURGIE)" },
+"URGENCES_MAIN_AUVERGNE_CHIRURGIE_" : { "AUTOMOD@" : "http://cao/Nif/AUTOMOD.nif","saved:" : "24/09/2015 14:41:57" },
+"CONTACTS_LIST" : { "Gerald GAY (LAPOSTE)" : "TEL=04 73 40 80 41,NAME=Gerald GAY,FACTURER_A=CCCHLMS Chirurgiens,ID=0000000081,TYPE=LAPOSTE,TITRE=Mr,PRENOM=Gerald,NOM=GAY,MOB=06 58 57 18 00,MEL=gerald.gay@laposte.fr,REM=Beaumont,GEOLOC=000018,Lieu=La poste CLERMONT-FD ORADOU,ADRESSE=201 rue de l'Oradou,ADRESSE_PLUS=,CODEPOSTAL=63000,VILLE=CLERMONT FERRAND,Cedex_Pays=,Latitude=Latitude:,Longitude=Longitude:,CP_VILLE=63000 CLERMONT FERRAND" } } ;
+//End Of Datas
+//End of XinixObject
+
+</script>
+ 
+ <script subject="LZ-based compression algorithm">
+ // LZ-based compression algorithm, version 1.4.4 Copyright (c) 2013 Pieroxy <pieroxy@pieroxy.net>
+ var LZString=(function(){var f=String.fromCharCode;var keyStrBase64="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";var keyStrUriSafe="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+-$";var baseReverseDic={};function getBaseValue(alphabet,character){if(!baseReverseDic[alphabet]){baseReverseDic[alphabet]={};for(var i=0;i<alphabet.length;i++){baseReverseDic[alphabet][alphabet.charAt(i)]=i}}return baseReverseDic[alphabet][character]}var LZString={compressToBase64:function(input){if(input==null)return"";var res=LZString._compress(input,6,function(a){return keyStrBase64.charAt(a)});switch(res.length%4){default:case 0:return res;case 1:return res+"===";case 2:return res+"==";case 3:return res+"="}},decompressFromBase64:function(input){if(input==null)return"";if(input=="")return null;return LZString._decompress(input.length,32,function(index){return getBaseValue(keyStrBase64,input.charAt(index))})},compressToUTF16:function(input){if(input==null)return"";return LZString._compress(input,15,function(a){return f(a+32)})+" "},decompressFromUTF16:function(compressed){if(compressed==null)return"";if(compressed=="")return null;return LZString._decompress(compressed.length,16384,function(index){return compressed.charCodeAt(index)-32})},compressToUint8Array:function(uncompressed){var compressed=LZString.compress(uncompressed);var buf=new Uint8Array(compressed.length*2);for(var i=0,TotalLen=compressed.length;i<TotalLen;i++){var current_value=compressed.charCodeAt(i);buf[i*2]=current_value>>>8;buf[i*2+1]=current_value%256}return buf},decompressFromUint8Array:function(compressed){if(compressed===null||compressed===undefined){return LZString.decompress(compressed)}else{var buf=new Array(compressed.length/2);for(var i=0,TotalLen=buf.length;i<TotalLen;i++){buf[i]=compressed[i*2]*256+compressed[i*2+1]}var result=[];buf.forEach(function(c){result.push(f(c))});return LZString.decompress(result.join(''))}},compressToEncodedURIComponent:function(input){if(input==null)return"";return LZString._compress(input,6,function(a){return keyStrUriSafe.charAt(a)})},decompressFromEncodedURIComponent:function(input){if(input==null)return"";if(input=="")return null;input=input.replace(/ /g,"+");return LZString._decompress(input.length,32,function(index){return getBaseValue(keyStrUriSafe,input.charAt(index))})},compress:function(uncompressed){return LZString._compress(uncompressed,16,function(a){return f(a)})},_compress:function(uncompressed,bitsPerChar,getCharFromInt){if(uncompressed==null)return"";var i,value,context_dictionary={},context_dictionaryToCreate={},context_c="",context_wc="",context_w="",context_enlargeIn=2,context_dictSize=3,context_numBits=2,context_data=[],context_data_val=0,context_data_position=0,ii;for(ii=0;ii<uncompressed.length;ii+=1){context_c=uncompressed.charAt(ii);if(!Object.prototype.hasOwnProperty.call(context_dictionary,context_c)){context_dictionary[context_c]=context_dictSize++;context_dictionaryToCreate[context_c]=true}context_wc=context_w+context_c;if(Object.prototype.hasOwnProperty.call(context_dictionary,context_wc)){context_w=context_wc}else{if(Object.prototype.hasOwnProperty.call(context_dictionaryToCreate,context_w)){if(context_w.charCodeAt(0)<256){for(i=0;i<context_numBits;i++){context_data_val=(context_data_val<<1);if(context_data_position==bitsPerChar-1){context_data_position=0;context_data.push(getCharFromInt(context_data_val));context_data_val=0}else{context_data_position++}}value=context_w.charCodeAt(0);for(i=0;i<8;i++){context_data_val=(context_data_val<<1)|(value&1);if(context_data_position==bitsPerChar-1){context_data_position=0;context_data.push(getCharFromInt(context_data_val));context_data_val=0}else{context_data_position++}value=value>>1}}else{value=1;for(i=0;i<context_numBits;i++){context_data_val=(context_data_val<<1)|value;if(context_data_position==bitsPerChar-1){context_data_position=0;context_data.push(getCharFromInt(context_data_val));context_data_val=0}else{context_data_position++}value=0}value=context_w.charCodeAt(0);for(i=0;i<16;i++){context_data_val=(context_data_val<<1)|(value&1);if(context_data_position==bitsPerChar-1){context_data_position=0;context_data.push(getCharFromInt(context_data_val));context_data_val=0}else{context_data_position++}value=value>>1}}context_enlargeIn--;if(context_enlargeIn==0){context_enlargeIn=Math.pow(2,context_numBits);context_numBits++}delete context_dictionaryToCreate[context_w]}else{value=context_dictionary[context_w];for(i=0;i<context_numBits;i++){context_data_val=(context_data_val<<1)|(value&1);if(context_data_position==bitsPerChar-1){context_data_position=0;context_data.push(getCharFromInt(context_data_val));context_data_val=0}else{context_data_position++}value=value>>1}}context_enlargeIn--;if(context_enlargeIn==0){context_enlargeIn=Math.pow(2,context_numBits);context_numBits++}context_dictionary[context_wc]=context_dictSize++;context_w=String(context_c)}}if(context_w!==""){if(Object.prototype.hasOwnProperty.call(context_dictionaryToCreate,context_w)){if(context_w.charCodeAt(0)<256){for(i=0;i<context_numBits;i++){context_data_val=(context_data_val<<1);if(context_data_position==bitsPerChar-1){context_data_position=0;context_data.push(getCharFromInt(context_data_val));context_data_val=0}else{context_data_position++}}value=context_w.charCodeAt(0);for(i=0;i<8;i++){context_data_val=(context_data_val<<1)|(value&1);if(context_data_position==bitsPerChar-1){context_data_position=0;context_data.push(getCharFromInt(context_data_val));context_data_val=0}else{context_data_position++}value=value>>1}}else{value=1;for(i=0;i<context_numBits;i++){context_data_val=(context_data_val<<1)|value;if(context_data_position==bitsPerChar-1){context_data_position=0;context_data.push(getCharFromInt(context_data_val));context_data_val=0}else{context_data_position++}value=0}value=context_w.charCodeAt(0);for(i=0;i<16;i++){context_data_val=(context_data_val<<1)|(value&1);if(context_data_position==bitsPerChar-1){context_data_position=0;context_data.push(getCharFromInt(context_data_val));context_data_val=0}else{context_data_position++}value=value>>1}}context_enlargeIn--;if(context_enlargeIn==0){context_enlargeIn=Math.pow(2,context_numBits);context_numBits++}delete context_dictionaryToCreate[context_w]}else{value=context_dictionary[context_w];for(i=0;i<context_numBits;i++){context_data_val=(context_data_val<<1)|(value&1);if(context_data_position==bitsPerChar-1){context_data_position=0;context_data.push(getCharFromInt(context_data_val));context_data_val=0}else{context_data_position++}value=value>>1}}context_enlargeIn--;if(context_enlargeIn==0){context_enlargeIn=Math.pow(2,context_numBits);context_numBits++}}value=2;for(i=0;i<context_numBits;i++){context_data_val=(context_data_val<<1)|(value&1);if(context_data_position==bitsPerChar-1){context_data_position=0;context_data.push(getCharFromInt(context_data_val));context_data_val=0}else{context_data_position++}value=value>>1}while(true){context_data_val=(context_data_val<<1);if(context_data_position==bitsPerChar-1){context_data.push(getCharFromInt(context_data_val));break}else context_data_position++}return context_data.join('')},decompress:function(compressed){if(compressed==null)return"";if(compressed=="")return null;return LZString._decompress(compressed.length,32768,function(index){return compressed.charCodeAt(index)})},_decompress:function(length,resetValue,getNextValue){var dictionary=[],next,enlargeIn=4,dictSize=4,numBits=3,entry="",result=[],i,w,bits,resb,maxpower,power,c,data={val:getNextValue(0),position:resetValue,index:1};for(i=0;i<3;i+=1){dictionary[i]=i}bits=0;maxpower=Math.pow(2,2);power=1;while(power!=maxpower){resb=data.val&data.position;data.position>>=1;if(data.position==0){data.position=resetValue;data.val=getNextValue(data.index++)}bits|=(resb>0?1:0)*power;power<<=1}switch(next=bits){case 0:bits=0;maxpower=Math.pow(2,8);power=1;while(power!=maxpower){resb=data.val&data.position;data.position>>=1;if(data.position==0){data.position=resetValue;data.val=getNextValue(data.index++)}bits|=(resb>0?1:0)*power;power<<=1}c=f(bits);break;case 1:bits=0;maxpower=Math.pow(2,16);power=1;while(power!=maxpower){resb=data.val&data.position;data.position>>=1;if(data.position==0){data.position=resetValue;data.val=getNextValue(data.index++)}bits|=(resb>0?1:0)*power;power<<=1}c=f(bits);break;case 2:return""}dictionary[3]=c;w=c;result.push(c);while(true){if(data.index>length){return""}bits=0;maxpower=Math.pow(2,numBits);power=1;while(power!=maxpower){resb=data.val&data.position;data.position>>=1;if(data.position==0){data.position=resetValue;data.val=getNextValue(data.index++)}bits|=(resb>0?1:0)*power;power<<=1}switch(c=bits){case 0:bits=0;maxpower=Math.pow(2,8);power=1;while(power!=maxpower){resb=data.val&data.position;data.position>>=1;if(data.position==0){data.position=resetValue;data.val=getNextValue(data.index++)}bits|=(resb>0?1:0)*power;power<<=1}dictionary[dictSize++]=f(bits);c=dictSize-1;enlargeIn--;break;case 1:bits=0;maxpower=Math.pow(2,16);power=1;while(power!=maxpower){resb=data.val&data.position;data.position>>=1;if(data.position==0){data.position=resetValue;data.val=getNextValue(data.index++)}bits|=(resb>0?1:0)*power;power<<=1}dictionary[dictSize++]=f(bits);c=dictSize-1;enlargeIn--;break;case 2:return result.join('')}if(enlargeIn==0){enlargeIn=Math.pow(2,numBits);numBits++}if(dictionary[c]){entry=dictionary[c]}else{if(c===dictSize){entry=w+w.charAt(0)}else{return null}}result.push(entry);dictionary[dictSize++]=w+entry.charAt(0);enlargeIn--;w=entry;if(enlargeIn==0){enlargeIn=Math.pow(2,numBits);numBits++}}}};return LZString})();if(typeof define==='function'&&define.amd){define(function(){return LZString})}else if(typeof module!=='undefined'&&module!=null){module.exports=LZString}else if(typeof angular!=='undefined'&&angular!=null){angular.module('LZString',[]).factory('LZString',function(){return LZString})}
+ 
+ 
+ var Base64String={compressToUTF16:function(input){var output=[],i,c,current,status=0;input=this.compress(input);for(i=0;i<input.length;i++){c=input.charCodeAt(i);switch(status++){case 0:output.push(String.fromCharCode((c>>1)+32));current=(c&1)<<14;break;case 1:output.push(String.fromCharCode((current+(c>>2))+32));current=(c&3)<<13;break;case 2:output.push(String.fromCharCode((current+(c>>3))+32));current=(c&7)<<12;break;case 3:output.push(String.fromCharCode((current+(c>>4))+32));current=(c&15)<<11;break;case 4:output.push(String.fromCharCode((current+(c>>5))+32));current=(c&31)<<10;break;case 5:output.push(String.fromCharCode((current+(c>>6))+32));current=(c&63)<<9;break;case 6:output.push(String.fromCharCode((current+(c>>7))+32));current=(c&127)<<8;break;case 7:output.push(String.fromCharCode((current+(c>>8))+32));current=(c&255)<<7;break;case 8:output.push(String.fromCharCode((current+(c>>9))+32));current=(c&511)<<6;break;case 9:output.push(String.fromCharCode((current+(c>>10))+32));current=(c&1023)<<5;break;case 10:output.push(String.fromCharCode((current+(c>>11))+32));current=(c&2047)<<4;break;case 11:output.push(String.fromCharCode((current+(c>>12))+32));current=(c&4095)<<3;break;case 12:output.push(String.fromCharCode((current+(c>>13))+32));current=(c&8191)<<2;break;case 13:output.push(String.fromCharCode((current+(c>>14))+32));current=(c&16383)<<1;break;case 14:output.push(String.fromCharCode((current+(c>>15))+32,(c&32767)+32));status=0;break}}output.push(String.fromCharCode(current+32));return output.join('')},decompressFromUTF16:function(input){var output=[],current,c,status=0,i=0;while(i<input.length){c=input.charCodeAt(i)-32;switch(status++){case 0:current=c<<1;break;case 1:output.push(String.fromCharCode(current|(c>>14)));current=(c&16383)<<2;break;case 2:output.push(String.fromCharCode(current|(c>>13)));current=(c&8191)<<3;break;case 3:output.push(String.fromCharCode(current|(c>>12)));current=(c&4095)<<4;break;case 4:output.push(String.fromCharCode(current|(c>>11)));current=(c&2047)<<5;break;case 5:output.push(String.fromCharCode(current|(c>>10)));current=(c&1023)<<6;break;case 6:output.push(String.fromCharCode(current|(c>>9)));current=(c&511)<<7;break;case 7:output.push(String.fromCharCode(current|(c>>8)));current=(c&255)<<8;break;case 8:output.push(String.fromCharCode(current|(c>>7)));current=(c&127)<<9;break;case 9:output.push(String.fromCharCode(current|(c>>6)));current=(c&63)<<10;break;case 10:output.push(String.fromCharCode(current|(c>>5)));current=(c&31)<<11;break;case 11:output.push(String.fromCharCode(current|(c>>4)));current=(c&15)<<12;break;case 12:output.push(String.fromCharCode(current|(c>>3)));current=(c&7)<<13;break;case 13:output.push(String.fromCharCode(current|(c>>2)));current=(c&3)<<14;break;case 14:output.push(String.fromCharCode(current|(c>>1)));current=(c&1)<<15;break;case 15:output.push(String.fromCharCode(current|c));status=0;break}i++}return this.decompress(output.join(''))},_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",decompress:function(input){var output=[];var chr1,chr2,chr3,enc1,enc2,enc3,enc4;var i=1;var odd=input.charCodeAt(0)>>8;while(i<input.length*2&&(i<input.length*2-1||odd==0)){if(i%2==0){chr1=input.charCodeAt(i/2)>>8;chr2=input.charCodeAt(i/2)&255;if(i/2+1<input.length)chr3=input.charCodeAt(i/2+1)>>8;else chr3=NaN}else{chr1=input.charCodeAt((i-1)/2)&255;if((i+1)/2<input.length){chr2=input.charCodeAt((i+1)/2)>>8;chr3=input.charCodeAt((i+1)/2)&255}else chr2=chr3=NaN}i+=3;enc1=chr1>>2;enc2=((chr1&3)<<4)|(chr2>>4);enc3=((chr2&15)<<2)|(chr3>>6);enc4=chr3&63;if(isNaN(chr2)||(i==input.length*2+1&&odd)){enc3=enc4=64}else if(isNaN(chr3)||(i==input.length*2&&odd)){enc4=64}output.push(this._keyStr.charAt(enc1));output.push(this._keyStr.charAt(enc2));output.push(this._keyStr.charAt(enc3));output.push(this._keyStr.charAt(enc4))}return output.join('')},compress:function(input){var output=[],ol=1,output_,chr1,chr2,chr3,enc1,enc2,enc3,enc4,i=0,flush=false;input=input.replace(/[^A-Za-z0-9\+\/\=]/g,"");while(i<input.length){enc1=this._keyStr.indexOf(input.charAt(i++));enc2=this._keyStr.indexOf(input.charAt(i++));enc3=this._keyStr.indexOf(input.charAt(i++));enc4=this._keyStr.indexOf(input.charAt(i++));chr1=(enc1<<2)|(enc2>>4);chr2=((enc2&15)<<4)|(enc3>>2);chr3=((enc3&3)<<6)|enc4;if(ol%2==0){output_=chr1<<8;flush=true;if(enc3!=64){output.push(String.fromCharCode(output_|chr2));flush=false}if(enc4!=64){output_=chr3<<8;flush=true}}else{output.push(String.fromCharCode(output_|chr1));flush=false;if(enc3!=64){output_=chr2<<8;flush=true}if(enc4!=64){output.push(String.fromCharCode(output_|chr3));flush=false}}ol+=3}if(flush){output.push(String.fromCharCode(output_));output=output.join('');output=String.fromCharCode(output.charCodeAt(0)|256)+output.substring(1)}else{output=output.join('')}return output}}
+ 
+ </scripT>
+<script subject="Main_BAT">
+ const melreg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+var idCounters =[
+"NbDlAfPrio","NbDlSfPrio","NbDlAfLv","NbDlSfLv",
+"NbC5AfPrio","NbC5SfPrio","NbC5AfLv","NbC5SfLv",
+"NbC4AfPrio","NbC4SfPrio","NbC4AfLv","NbC4SfLv",
+"NbImpSupA","NbImpSupB"];
+
+
+var Notes={"ClientName":null};
+var Cmd={"NbTEnvImp":0};
+var allQuantPrio=document.getElementsByClassName("QuantPrio");
+for (var i = 0; i < allQuantPrio.length; i++) {
+    allQuantPrio[i];
+}
+//
+function QuantValueOf(ctrl)
+{ 
+  if (ctrl['value']!==undefined && ctrl['value']!=="" && !isNaN(ctrl['value']))
+   { var x=parseFloat(ctrl['value']);
+     if (x===0) {ctrl['value']="";}
+     return x;
+   }
+   else return 0;
+}
+
+function QuantImpression(select)
+{ var total=0;console.group("ImpQuant:"+select);
+ for (x=0;x<idCounters.length;x++)
+  { var account=idCounters[x];
+    var ctrlinp=document.getElementById(account);
+    var counted=QuantValueOf(ctrlinp);
+    if (account.indexOf(select)>=0) {total+=counted;}
+	console.log(x+")"+account+":+"+counted+"pcs="+total);
+  }
+/*
+ total+=QuantValueOf(document.getElementById("NbDlSfPrio"));
+ total+=QuantValueOf(document.getElementById("NbDlAfPrio"));
+ total+=QuantValueOf(document.getElementById("NbC5AfPrio"));
+ total+=QuantValueOf(document.getElementById("NbC5SfPrio"));
+ total+=QuantValueOf(document.getElementById("NbC4AfPrio"));
+ total+=QuantValueOf(document.getElementById("NbC4SfPrio"));
+ 
+ total+=QuantValueOf(document.getElementById("NbDlSfLv"));
+ total+=QuantValueOf(document.getElementById("NbDlAfLv"));
+ total+=QuantValueOf(document.getElementById("NbC5AfLv"));
+ total+=QuantValueOf(document.getElementById("NbC5SfLv"));
+ total+=QuantValueOf(document.getElementById("NbC4AfLv"));
+ total+=QuantValueOf(document.getElementById("NbC4SfLv"));
+ total+=QuantValueOf(document.getElementById("NbImpSupA"));
+ total+=QuantValueOf(document.getElementById("NbImpSupB"));*/
+ console.log("/"+total);
+ console.groupEnd();
+  return total;
+ 
+}
+function getPrizeFrom(Euros)
+{ console.group("getPrizeFrom("+Euros+")");
+const euroregex = /[0-9]*(?:\.[0-9]+|)€/ ;
+if (euroregex.test(Euros)) //;prizes.length>0)
+{
+var prizes=Euros.match(euroregex);
+var l=prizes.length-1;
+console.log(Euros+" <=> "+euroregex + " : " + prizes[l].substring(0,prizes[l].length-1)+" €");
+console.groupEnd();
+return parseFloat(prizes[l].substring(0,prizes[l].length-1)).toFixed(3);
+} else { console.log("nomatch");
+console.groupEnd();
+return parseFloat("0.000").toFixed(3);}
+
+}
+function getPoidsRef(ref)
+{ //ref: DL  PoidsFournit
+  
+  console.group("getPoidsRef:'"+ref+"'");
+   for(var key in PoidsFournit ) 
+      { var poids = PoidsFournit[key];
+	    console.log("poids("+ref+"):"+key+"("+poids+")");
+		if (ref.indexOf(key)==0) {
+		console.groupEnd();
+		return parseFloat(poids).toFixed(4);
+		}
+	  }
+  console.groupEnd();	  
+}
+function Prize(Qu,Priz,Store) //readQuPrizStore
+{ 
+ var n=document.getElementById(Qu).value; console.log(Qu+" Qu:["+n+"]");
+ if ((n==0)||(n=="")) { document.getElementById(Store).value="";return 0;}
+ //var pu=getPrizeFrom("prix: 0.04€ DLS");
+ var pu=getPrizeFrom(document.getElementById(Priz).value);
+ var pt=parseFloat(pu*n).toFixed(3);
+ document.getElementById(Store).value=pt;
+ console.log(Priz+":"+n+"x"+pu+"€"+"="+pt);
+ return pt;
+}
+function PeseAsRef(Qu,Ref)
+{//PoidsFournit
+ var n=document.getElementById(Qu).value; console.log(Qu+" Qu:["+n+"pcs]");
+	var pur=getPoidsRef(document.getElementById(Ref).value);
+	var ptg=parseFloat(pur*n).toFixed(4);
+	console.log(Ref+":"+n+"x"+pur+"g"+"="+ptg);
+	if (isNaN(ptg)) {return 0 ;}
+	else {return ptg;}
+}
+
+function assurPour(valeur)
+{console.group("assurPour:"+valeur);
+ if (isNaN(valeur) || valeur<=0) return 0;
+ var assursup=AssureColissimo[0][0];
+ for (n =0 ; n< AssureColissimo.length; n++)
+ { assursup=AssureColissimo[n][0];
+   console.log("AssureColissimo("+valeur+"<"+assursup+")="+AssureColissimo[n][1]);
+   if ( assursup > valeur ) 
+    { console.groupEnd();
+	return AssureColissimo[n][1]; 
+	}
+ }
+ console.groupEnd();return 0;
+}
+
+function CoutColisASign(poiducolis)
+{console.group("CoutColisASign:"+poiducolis);
+if (isNaN(poiducolis) || poiducolis<=0) return 0;
+var poidsmax=30;var NbColis=1;
+var poiduncolis=poiducolis;
+var maxiprice=TarifColissimo[31][2];
+var allcolisprice=0;
+var overdose=(poiducolis>30);
+document.getElementById("Colis").innerHTML="Colis";
+ if (overdose) {// modulo
+ NbColis=(poiducolis/poidsmax);//g
+ allcolisprice=parseFloat(Math.trunc(NbColis)*maxiprice).toFixed(3);
+ poiduncolis=poiducolis-(Math.trunc(NbColis)*poidsmax);
+ document.getElementById("Colis").innerHTML=Math.ceil(NbColis)+"x";
+ //alert("Poids du Colis au dessus des 30kg !! Scinder la commande en "+Math.ceil(NbColis)+" Colissimos");
+ } 
+
+ var poidsup=TarifColissimo[0][0];
+ for (n =0 ; n< TarifColissimo.length; n++)
+ { poidsup=TarifColissimo[n][0];
+   console.log("CoutColisASign("+poiduncolis+"<"+poidsup+")="+TarifColissimo[n][2]+"[+"+allcolisprice+"/"+Math.ceil(NbColis)+'[');
+   if ( poidsup > poiduncolis ) 
+   {   console.groupEnd();	
+    return parseFloat(parseFloat(allcolisprice)+parseFloat(TarifColissimo[n][2])).toFixed(2); 
+	}
+ }
+ 
+}
+
+function Hop()
+{
+  var NumImp=QuantImpression("Nb");
+  document.getElementById("NbTEnvImp").value=NumImp;
+  console.log("Enter QuImpr:"+NumImp);
+  
+  var CoutSupA=Prize("NbImpSupA","FournitureSupA","CoutSupA")*1;
+	  console.log("CoutSupA:"+CoutSupA+"€");
+  var CoutSupB=Prize("NbImpSupB","FournitureSupB","CoutSupB")*1;
+      console.log("CoutSupB:"+CoutSupB+"€");
+  var poiducolis=ponderation();
+  var ImpTtc=getPrizeFrom(document.getElementById("ImpTtc").value);
+      console.log("ImpTtc:"+document.getElementById("ImpTtc").value+";;"+ImpTtc+"€");
+  var NoFactOption=getPrizeFrom(document.getElementById("NoFactOption").value)*1;
+    var assur=parseFloat(parseFloat(CoutSupA)+parseFloat(CoutSupB)+parseFloat(ImpTtc)+parseFloat(NoFactOption)).toFixed(3);
+   console.log("assur:"+assur);
+  var coutducolis=parseFloat(facturexped(poiducolis,assur)).toFixed(3);//assurance
+  var PTTC=parseFloat(parseFloat(assur)+parseFloat(coutducolis)).toFixed(2);
+  document.getElementById("PTTC").value=PTTC;
+}
+
+function ponderation()
+{  console.group("Ponderation");
+   var FournitureSupA=PeseAsRef("NbImpSupA","FournitureSupA"); 
+   var FournitureSupB=PeseAsRef("NbImpSupB","FournitureSupB");
+   var NbDl=QuantImpression("NbDl")*getPoidsRef("DL");
+   var NbC5=QuantImpression("NbC5")*getPoidsRef("C5");
+   var NbC4=QuantImpression("NbC4")*getPoidsRef("C4");
+   var poiducolis=parseFloat(
+   +parseFloat(FournitureSupA)
+   +parseFloat(FournitureSupB)
+   +parseFloat(NbDl)
+   +parseFloat(NbC5)
+   +parseFloat(NbC4)
+   ).toFixed(4);
+   console.log("Total poids du colis:"+poiducolis);
+   if (poiducolis>0 && !isNaN(poiducolis))
+   { document.getElementById("PoidsDuColis").value=poiducolis;
+	 console.groupEnd();return poiducolis;
+	}  else
+	{document.getElementById("PoidsDuColis").value="";
+     console.groupEnd();return 0;
+	}
+
+}
+function facturexped(poiducolis,valass)
+{
+ var cout=CoutColisASign(poiducolis);
+ var valassur=assurPour(valass);
+ var total=parseFloat(parseFloat(valassur)+parseFloat(cout)).toFixed(2);
+ console.log("facturexped:"+cout+"+"+valassur+"="+total);
+ document.getElementById("ExpiNetTtc").value=total;
+ return parseFloat(total).toFixed(2);
+}
+function changeFourniture(ctrl)
+{ 
+}
+function getLocalFilename()
+{
+var firstpath=window.location.pathname.substring(1,window.location.pathname.lastIndexOf("/"));
+var lastpath=decodeURI(firstpath.substring(firstpath.lastIndexOf("/")+1));
+return lastpath;
+}
+
+function getClientFilename()
+{
+return (Notes["ClientName"]!="undefined" && Notes["ClientName"]!=null)?Notes["ClientName"]:getLocalFilename();
+}
+function download(){
+var moment=new Date(); 
+var filenameid=getLocalFilename();
+document.title="["+filenameid+"] [du_"+moment.toLocaleString().replace("/","-").replace("/","-")+"]";
+var link = document.createElement("a");
+link.setAttribute("target","_blank");
+var allhtml= encodeURIComponent(document.documentElement.innerHTML);
+//set datas to download
+var searchdatas=/NOTES%40DATAS%0A/;
+var newhtml=allhtml.replace(searchdatas,"my-personal-datas");
+//here replace section datas
+link.setAttribute("href","data:text/html," +newhtml );
+link.setAttribute("class","download");
+link.setAttribute("download",(document.title)+".html");
+document.body.appendChild(link);
+link.click();
+//rem under to get the link in the inspector
+document.body.removeChild(link);
+}
+
+//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal
+//https://www.w3schools.com/howto/howto_css_modals.asp
+function EnlevClick(control)
+{var radio = document.getElementsByClassName("radioexp");
+for (var i = 0; i < radio.length; i++) {
+  if (radio[i]!==control) {
+  radio[i].checked=false;
+  var ExpTo = document.getElementById("ExpTo");
+  ExpTo.style.setProperty('color',"lightgray");
+  }
+}
+  document.getElementById("ExpiNetTtc").value="";
+}
+
+function ExpedClick(control){
+var Expedier = document.getElementById("Expedier");
+Expedier.checked=true;
+ var ExpTo = document.getElementById("ExpTo");
+  ExpTo.style.setProperty('color',"black");
+
+}
+ 
+function PostClick(control){}
+function PdcClick(control){}
+function RtnClienClick(control){}
+ 
+function Majuscule(control) //onfocusout
+{ /*var element = document.getElementById("fname");*/
+ control.value=control.value.toUpperCase();
+}
+function MelCtrl(control)
+{ //if melreg.test(control.value.toLowerCase())
+}
+function Mnemorize(control)
+{
+var ctrl=document.getElementById(control.id);
+memorized=ctrl.getAttribute("memorized");
+newvalue=encodeURIComponent(control.value);
+ctrl.setAttribute("memorized",newvalue);  
+Notes[control.name]=control.value;
+console.log("["+control.id+"]:"+control.name+":"+memorized+"="+encodeURIComponent(control.value));
+ 
+}
+function UpdateDatas(innerHTMLtext)
+{ var moment=new Date();
+  var instant=moment.toLocaleString().replace("/","-").replace("/","-");
+  newtext=innerHTMLtext.replace("<data %DATE%>","du "+instant);
+  if (Notes["Nuic"]!=undefined) {newtext=newtext.replace("<data %BATNUIC%>","N° "+Nuic+"B");}
+  //alert(newtext);
+  return newtext;
+}
+
+function fillFormXinix()
+{ //in place holders ??
+  
+}
+function fillFromDatas(datastring)
+{ var arrdatas=datastring.split("&");
+var parameters=[];var nv=[];console.group("FromUrlDatas");
+  for (i=0; i < arrdatas.length; i++) {
+    nv = arrdatas[i].split('=');	
+    parameters.push(nv[0],nv[1]);
+	
+    ctrlid=decodeURIComponent(nv[0]).replace('+',' ');
+	 while (ctrlid.indexOf('+')>0) {ctrlid=ctrlid.replace('+',' ');}
+	ctrl=document.getElementById(ctrlid);
+	
+	console.log(arrdatas[i]+":"+ctrlid+"{"+ctrl+"}"+"=>"+decodeURIComponent(nv[1]));
+	if (ctrl!=null) {
+	 if (ctrl.type==="checkbox" ) {ctrl.checked="true"; }
+	 else { 
+				 ctrl.value=decodeURIComponent(nv[1]).replace('+',' ');
+				  while (ctrl.value.indexOf('+')>0) {ctrl.value=ctrl.value.replace('+',' ');}
+				
+			}	
+	 } else
+	 {
+	 		radio=document.getElementById(nv[1]);
+			if (radio!=null && radio.type==="radio") {
+			console.log(arrdatas[i]+"*"+radio.type);
+			radio.checked="true"; }
+	 }		
+	 nv.length = 0;
+ }
+  console.groupEnd();
+}
+function FillFournitures(ctrlid)
+{ 
+   var that=document.getElementById(ctrlid);
+  //rem remover :
+  while (that.options.length) that.remove(0);
+  for(var i = 0; i < Fournitures.length; i++) 
+  { var opt = Fournitures[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    //el.value = opt;
+    that.appendChild(el);
+  }
+}
+function FillOptions(listoption,ctrlid)
+{//OptionsList NoFactOption
+var that=document.getElementById(ctrlid);
+console.log(ctrlid+" trouvé:"+that);
+ while (that.options.length) that.remove(0);
+ for(var key in listoption ) 
+ { var value = listoption[key];
+	var el = document.createElement("option");
+	el.textContent = value;
+    el.value = key;
+    that.appendChild(el);
+ }
+}
+
+function startMeUp()
+{  
+var moment=new Date();
+var instant=moment.toLocaleString().replace("/","-").replace("/","-");
+var qrcode =  new QRCode("TheQrCode", {
+   text: "http://iescolore.github.io/#BonDeCommandePap", 
+	width: 150,
+    height: 150,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+});	
+
+var batFilename=getLocalFilename();
+var imgBAT=document.getElementById("imgBAT");
+console.log("From:"+batFilename+".jpg");
+
+imgBAT.src=batFilename+".jpg";
+FillFournitures("FournitureSupA");
+FillFournitures("FournitureSupB");
+FillOptions(OptionsList,"NoFactOption");//OptionsList
+FillOptions(PrixPersoEnv,"COL");//PrixPersoEnv
+fillFromDatas(window.location.search.substring(1));
+document.getElementById("SousFentreAdressage").innerHTML =UpdateDatas("Bon A Tirer <strong><data %BATNUIC%> <data %DATE%> </strong> a retourné signé par email,fax (04 73 73 38 88 ) ou avec les produits à imprimer.");
+ <!-- "Bon A Tirer <strong><data %NUIC%/> <data %DATE%> </strong> a retourné signé par email,fax (04 73 73 38 88 ) ou avec les produits à imprimer.".replace("<data %DATE%>","du "+instant); -->
+fillFormXinix();
+
+Hop();	
+}
+function CodeTheQR(datas)
+{ document.getElementById("TheQrCode").innerHTML = ""
+  var qrcode = qrcode || new QRCode("TheQrCode", {
+    text: datas, //
+    width: 150,
+    height: 150,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+});
+}
+function blobToBase64(blob, callback)
+{   console.log("blobToBase64");
+    var reader = new FileReader();	
+
+    reader.onload = function() {
+        var dataUrl = reader.result;
+        var base64 = dataUrl;//.split(',')[1];
+		console.log(base64);
+        if (callback!="undefined") { callback(base64); }
+		else return base64;
+		}	
+	reader.readAsDataURL(blob); 		
+}
+
+function LoadVisual()	
+{
+ const input=document.querySelector('input[type="file"]');
+ const file = input.files[0]; //as Blob
+ var urlimg = URL.createObjectURL(input.files[0]);
+ imgBAT=document.getElementById("imgBAT");
+ imgBAT.src=urlimg;
+ blobToBase64(file); 
+}
+//error document.querySelector('input[type="file"]')[0].addEventListener('change','LoadVisual'); 
+
+</script>	
+</head>
+<!--https://www.saint-jean-calendriers.com/wp-content/uploads/2016/06/00-CARTOUCHE-POUR-BAT.jpg-->
+<body style="background-image: url('');" onload="startMeUp();">
+
+<div id="BatZone" value="null">
+<img id="imgBAT" src="/BAT.jpg" >
+</div>
+<textarea id="Notes" style="position:absolute;z-index:11000;display:block;width:8px;height:8px;" >
+NOTES@DATAS
+</textarea>
+<Form id="BATForm">
+
+<div id="CheckNew" style="position:absolute;top:5px;left:870px;width:234px;z-index:1000;">
+<input id="NoUnIdCli" type=hidden Name="NoUnIdCli" Value="">
+<input class="Check input" id="icNewBat" type="checkbox" >
+<br>
+<!--strong >d'un&nbsp;Nouveau&nbsp;BAT&nbsp;<strong><b class=mini >(ou modification )</b></input><br-->
+<input class="Check input" id="icNewCom"  type="checkbox" >
+<!--strong>D'une&nbsp;impression</strong><b class=mini >&nbsp;(Renouvellement)</b> </input><br-->
+</div>
+
+
+<div id="CheckBdcDatas" style="position:absolute;top:40px;left:510px;z-index:1000;width:589px;background-color: WhiteSmoke;font-weight:bold;" >
+<table style="width:100%;font-size:1em;color:black;border:0px solid white;font-weight:bold;padding:0px;">
+<tr><td>N° de Tél.:<label for=BdcTelPort >&#128222;</label>
+<input  id=BdcTelPort Name=BdcTelPort type=number check=asNtel minlength="4" maxlength="10" placeholder="Téléphone ou fixe" size=8><label id=forEMel for=BdcEMel>et E-Mail:</label><input id=BdcEMel Name=BdcEMel check=asMel type=text minlength="5" maxlength="50" placeholder="em@il de contact" size="25" >
+</td></tr><tr><td>
+<span id=WarnName class="Warning" >/!\</span>Commande à remettre à :<input id=BdcNameContact Name=BdcNameContact type=text   placeholder="Nom d'une ou plusieurs responsables (personnes physiques)" size="50">
+</td></tr><tr><td>
+<span id=WarnExpEnl class="Warning" >/!\</span> Par <input id=Enlever class=radioexp type=radio name=BdcRtnTyp value=Enlever onclick="EnlevClick(this);">
+<label for=Enlever>Enlèvement sur place  ou </label><input id=Expedier class=radioexp type=radio name=BdcRtnTyp value=Expedier onclick="ExpedClick(this);">
+<label for=Expedier> Expédition par voie postale (COLISSIMO)</label><!--(Rayez la mention inutile)-->
+</td></tr><tr><td id="ExpTo" >Au :
+<input type=radio class=radioexp id=RtnPost name=BdcRtnTo value=RtnPost onclick="ExpedClick(this);"><label for=RtnPost>  Bureau de Poste </label> 
+<input type=radio class=radioexp id=RtnPdc name=BdcRtnTo value=RtnPdc onclick="ExpedClick(this);"><label for=RtnPdc> Centre Courrier </label>
+<input type=radio class=radioexp id=RtnClient name=BdcRtnTo value=RtnClient onclick="ExpedClick(this);"><label for=RtnClient> Client+Frais d'Expédition / Colis</label>
+<label for=BdcNoAdress> Adresse :</label>
+<input id=BdcNoAdress name=BdcNoAdress type=text placeholder="N°" size=1></input>
+<SELECT id=BdcBisTer name=BdcBisTer type="select" onchange="Hop();"><option>,</option><option>bis</option><option>ter</option></SELECT>
+<input id=BdcAdrVoie name=BdcAdrVoie type=text placeholder="nom de voie " size=24>
+,<input id=BdcAdrPlus name=BdcAdrPlus type=text placeholder="complément adressse" size=24></input>
+</td></tr><tr><td>
+Code Postal&nbsp;:&nbsp;<input id=BdcCodePost  name=BdcCodePost type=text placeholder="....." size=2></input>
+Ville&nbsp;:&nbsp;<input id=BdcNomVille name=BdcNomVille type=text placeholder="nom de la ville" size=20></input>&nbsp;
+<input id=BdcCityCedex name=BdcCityCedex type=text placeholder="cedex" size=1></input>
+&phone;N°&nbsp;Fixe:<input id=BdcTelFix Name=BdcTelFix type=text   minlength="4" maxlength="10" placeholder="N° Tel  Fixe" size=7>
+</strong>
+<!--BR><strong><sup><FONT  COLOR="RED">/!\ LES ELEMENTS EN ROUGE SONT CONSTITUTIF D'UNE COMMANDE VALIDE \!/ </FONT></sup-->
+</td></tr></table>
+</div>
+
+
+
+<div id="CheckCommand" style="position:absolute;top:180px;left:848px;z-index:1000;width:250px;height:400;background-color: WhiteSmoke;font-family: cursive;font-weight:bold;" >
+<table style="width:100%;">
+<caption style="text-align:left;">Quantité 
+ <select class=transctrl style="font-family:cursive;widh:100%;" onchange="Hop();"><option value="EnvPerso">d'enveloppes </option></select>
+</caption>
+ <tr>	<th  colspan=2 style="width:5%;height:8%"><!--font size=0.1>Format</font-->
+		
+		<font size=2>LETTRE</font></th>
+		<th style="width:45%"><font size=1>AVEC fenêtre</font>
+		</th>
+		<th style="width:45%"><font size=1>SANS fenêtre</font>
+		</th>
+		</th>
+</tr>
+<tr  style="height:14%;">
+<td>D<BR>L</td><td class="paplayer"><font size=1>20g<!--br>110<br>x220--></font></td><td class="SVGBKG">
+<div style="position:absolute;margin:0;font-size:10px;">
+<input id=NbDlAfPrio Name=NbDlAfPrio class=QuantPrio type=number min="0" onchange=Hop()><br><br>
+<input id=NbDlAfLv Name=NbDlAfLv class=QuantLv type=number min="0" onchange=Hop()>
+</div>
+<svg width="78" height="45" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g>
+  <title>Quantité d'enveloppes "DL" <br> ou "20g" AVEC fênetre</title>
+   <g id="DLAF">
+   <rect stroke-opacity="0.15" fill="#ffffff" stroke-width="3" x="3.26954" y="5.2998" width="71.20312" height="35" id="svg_1" stroke="#888888"/>
+   <rect stroke-opacity="0.15" id="svg_2" height="6.32812" width="3.16406" y="12.05962" x="62.83907" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="3" stroke="#888888" fill="#ffffff"/>
+   <rect stroke-opacity="0.15" opacity="0.15" stroke="#888888" id="svg_4" height="9.17578" width="32.90625" y="23.02838" x="33.72969" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="3" fill="#888888"/>
+  </g>
+ </g>
+ </g>
+
+</svg>
+
+</td><td class="SVGBKG">
+<div style="position:absolute;margin:0;font-size:10px;">
+<input id=NbDlSfPrio Name=NbDlSfPrio class=QuantPrio type=number min="0" onchange=Hop() ><br><br>
+<input id=NbDlSfLv Name=NbDlSfLv class=QuantLv type=number min="0" onchange=Hop()>
+</div>
+ <g>
+<svg width="78" height="45" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+
+  <title>Quantité d'enveloppes "DL" <br> ou "20g" SANS fênetre</title>
+    <g id="DLSF">
+   <rect stroke-opacity="0.15" fill="#ffffff" stroke-width="3" x="3.26954" y="5.2998" width="71.20312" height="35" id="svg_1" stroke="#888888"/>
+   <rect stroke-opacity="0.15" id="svg_2" height="6.32812" width="3.16406" y="12.05962" x="62.83907" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="3" stroke="#888888" fill="#ffffff"/>
+  
+  </g>
+ </g>
+ </g>
+
+</svg>
+</td>
+</tr><tr>
+<td>C<br>5</td><td class="paplayer" ><font size=1>50g<!--br>162<br>x229--></font></td><td class="SVGBKG">
+<div style="position:absolute;margin:0;font-size:10px;">
+<input id=NbC5AfPrio Name=NbC5AfPrio class=QuantPrio type=number min="0" onchange=Hop()><br><br>
+<input id=NbC5AfLv Name=NbC5AfLv class=QuantLv type=number min="0" onchange=Hop()>
+</div>
+<svg width="75" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g>
+  <title>Quantité d'enveloppes "C5" <br> ou "50g" AVEC fênetre</title>
+  <rect stroke="#888888" id="svg_1" height="46" width="75" y="2.19824" x="0" stroke-width="3" fill="#ffffff" stroke-opacity="0.15"/>
+  <rect fill="#ffffff" stroke="#888888" stroke-width="3" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="64.21016" y="12.69244" width="3.16406" height="6.32812" id="svg_2" stroke-opacity="0.15"/>
+  <rect fill="#888888" stroke-width="3" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="35.10078" y="25.34869" width="32.90625" height="9.17578" id="svg_4" stroke="#666666" opacity="0.15" stroke-opacity="0.15"/>
+ </g>
+</svg>
+</td><td class="SVGBKG">
+<div style="position:absolute;margin:0;font-size:10px;">
+<input id=NbC5SfPrio Name=NbC5SfPrio class=QuantPrio type=number  min="0" onchange=Hop()><br><br>
+<input id=NbC5SfLv Name=NbC5SfLv class=QuantLv type=number  min="0" onchange=Hop()>
+</div>
+<svg width="75" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g>
+  <title>Quantité d'enveloppes "C5" <br> ou "50g" SANS fênetre</title>
+  <rect stroke="#888888" id="svg_1" height="46" width="75" y="2.19824" x="0" stroke-width="3" fill="#ffffff" stroke-opacity="0.15"/>
+  <rect fill="#ffffff" stroke="#888888" stroke-width="3" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="64.21016" y="12.69244" width="3.16406" height="6.32812" id="svg_2" stroke-opacity="0.15"/>
+ 
+ </g>
+</svg>
+</td>
+</tr><tr>
+<td>C<br>4</td><td class="paplayer"><font size=1>100g<!--br>229<br>x324--></font></td><td class="SVGBKG">
+<div style="position:absolute;margin:0;font-size:10px;">
+<input id=NbC4AfPrio Name=NbC4AfPrio class=QuantPrio type=number  min="0" onchange=Hop()><br><br>
+<input id=NbC4AfLv Name=NbC4AfLv class=QuantLv type=number  min="0" onchange=Hop()></div>
+<svg width="75" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g>
+  <title>Quantité d'enveloppes "C4" <br> ou "100g" AVEC fênetre</title>
+  <rect stroke="#888888" id="svg_1" height="48.53516" width="36.76172" y="1.56543" x="1.58203" stroke-width="3" fill="#ffffff" stroke-opacity="0.15"/>
+  <rect stroke="#888888" fill="#ffffff" stroke-width="3" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="31.93672" y="5.09869" width="3.16406" height="4.42968" id="svg_2" stroke-opacity="0.15"/>
+  <rect stroke="#888888" fill="#bfbfbf" stroke-width="3" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="13.90156" y="13.95806" width="19.93359" height="6.96094" id="svg_4" opacity="0.15" stroke-opacity="0.15"/>
+ </g>
+</svg>
+</td><td class="SVGBKG">
+<div style="position:absolute;margin:0;font-size:10px;">
+<input id=NbC4SfPrio Name=NbC4SfPrio class=QuantPrio type=number  min="0" onchange=Hop()><br><br>
+<input id=NbC4SfLv Name=NbC4SfLv class=QuantLv type=number  min="0" onchange=Hop()>
+</div>
+<svg width="75" height="50" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g>
+  <title>Quantité d'enveloppes "C4" <br> ou "100g" SANS fênetre</title>
+  <rect stroke="#888888" id="svg_1" height="48.53516" width="36.76172" y="1.56543" x="1.58203" stroke-width="3" fill="#ffffff" stroke-opacity="0.15"/>
+  <rect stroke="#888888" fill="#ffffff" stroke-width="3" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" x="31.93672" y="5.09869" width="3.16406" height="4.42968" id="svg_2" stroke-opacity="0.15"/>
+  
+ </g>
+</svg>
+</td>
+</tr>
+<tr style="height:25px;"><td colspan=2 style="">
+<input id=NbImpSupA name=NbImpSupA class=QuantSup type="number" min="0" style="width:100%;border: 1px solid transparent;background: transparent !important;font-weight:bold;" align="right" onchange=Hop()>
+</td>
+<td>
+<select id=FournitureSupA name=FournitureSupA style="bottom:0;width:100%;border: 1px solid transparent;background: transparent;" onchange=Hop()>
+<option> </option>
+<option> </option>
+<option value="Liste">/!\ La liste des</option>
+<option value="forunitures">Fournitures</option>
+<option value="Demande une">Demande une</option>
+<option value="Mise à jour">Mise à jour</option>
+</select>
+</td>
+<td ><input class="transctrl" id=CoutSupA Name=CoutSupA type=number step=0.001 min="0" style="width:80%;border: 1px solid transparent;background: transparent !important;" placeholder="Fournitures €"><span class=euros >€</span>
+</td>
+</tr>
+
+<tr style="height:25px;"><td colspan=2 style="">
+<input id=NbImpSupB name=NbImpSupB class=QuantSup type="number" min="0" style="width:100%;border: 1px solid transparent;background: transparent !important;font-weight:bold;" align="right" onchange=Hop()>
+</td>
+<td>
+<select id=FournitureSupB name=FournitureSupB style="bottom:0;width:100%;border: 1px solid transparent;background: transparent;" onchange="Hop();">
+<option> </option>
+<option value="Liste">/!\ La liste des</option>
+<option value="forunitures">Fournitures</option>
+<option value="Demande une">Demande une</option>
+<option value="Mise à jour">Mise à jour</option>
+</select>
+</td>
+<td><input class="transctrl" id=CoutSupB Name=CoutSupB type=number step=0.001 min="0" style="width:80%;border: 1px solid transparent;background: transparent !important;" placeholder="Fournitures €"><span class=euros >€</span>
+</td>
+</tr>
+<!--td colspan=2 class="TxtCase">Nb&nbsp;Tolal&nbsp;d'<br>enveloppes<br>à&nbsp;IMPRIMER</td-->
+<tr><td colspan=4 >
+<svg width="75" height="40" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g>
+  <title>Nombre Total d'enveloppes à imprimer tout format confondu.</title>
+  <text fill="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0.5" opacity="0.66" x="70.53349" y="23.51852" id="svg_1" font-size="24" font-family="Arial" text-anchor="middle" xml:space="preserve" transform="matrix(0.42060648214294594,0,0,0.6705330916011006,6.34796378445597,-2.9733248737477425) " stroke="#191919" font-weight="bold">Nombre  Total</text>
+  <text fill="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0.5" opacity="0.66" x="68.82678" y="38.79266" font-size="24" font-family="Arial" text-anchor="middle" xml:space="preserve" id="svg_2" transform="matrix(0.43653369822248345,0,0,0.7042161174341004,6.588100511917252,-0.9711053942616079) " stroke="#191919" font-weight="bold">d&#x27;enveloppes</text>
+  <text fill="#000000" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0.5" opacity="0.66" x="59.57081" y="55.58223" font-size="24" font-family="Arial" text-anchor="middle" xml:space="preserve" id="svg_4" transform="matrix(0.5236901967281382,0,0,0.5152925252914429,7.060311191779917,8.993596162647009) " stroke="#191919" font-weight="bold">à Imprimer :</text>
+ </g>
+</svg>
+<input id=NbTEnvImp Name=NbTEnvImp class=transinput type=number  min="0" style="width:65px;float:right;font-size:16px;" >
+<div style="float:right;color:black">
+en 
+<select id=COL Name=COL class="transctrl" style="float:right;bottom:0;" onchange="Hop();">
+<option value="NOIR">NOIR</option>
+<option value="ROUGE">ROUGE</option>
+<option value="BLEU">BLEU</option>
+<option value="VERT">VERT</option>
+<option value="SEPIA">SEPIA</option>
+<option value="QUADRI">QUADRI</option>
+</select>
+</div>
+<div style="position:relative"><input id="ImpTtc" name="ImpTtc" class="transinput" min="0" style="width:160px;float:right;bottom:0px;right:0;" placeholder="Impressions €ttc" alt="Cout des impressions" ><div>
+</td>
+</tr>
+<tr>
+<td colspan=2 class="logocolis" id="Colis">Colis</td>
+<td><input id=PoidsDuColis Name=PoidsDuColis type=number step=0.0001  min="0" style="width:75%;border: 1px solid transparent;background: transparent !important;float:left;" placeholder="Kg Estimés">kg</div></td>
+<td><input class="transctrl" id=ExpiNetTtc Name=ExpiNetTtc type=number step=0.001 min="0" style="float:left;width:80%;border: 1px solid transparent;background: transparent !important;" placeholder="Expedition €"><span class=euros >€</span></td>
+</tr>
+<tr><td colspan=4 style="height:30px">
+<textarea id=FactNote style="float:left;width:100%;height:100%;border: 1px solid transparent;background: transparent !important;"></textarea>
+
+</td></tr>
+<tr><td colspan=4 ><!--div style="float:left"; -->
+<select id=NoFactOption name=NoFactOption class="transctrl" style="width:100%;" onchange="Hop();">
+<option value="Ouvrage7€"> </option>
+<option value="ForInf16€" >Forfait Infographie: +16€ttc</option>
+</select>
+<br>
+<input id=PTTC Name=PTTC class=transinput type=number step="0.01" min="0" style="width:160px;margin:5px;float:left;">
+<span style="float:right;" >
+
+<svg width="78" height="35" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g>
+  <title>Cout Total pour l&#x27;impression et l'infographie</title>
+  <text fill="#7f7f7f" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0.5" opacity="0.66" x="70.98302" y="20.03559" id="svg_1" font-size="24" font-family="Arial" text-anchor="middle" xml:space="preserve" transform="matrix(1.5027411258977794,0,0,1.3766186473635715,-94.22278664156488,-1.5330521231961032) " stroke="#191919" font-weight="bold">€</text>
+  <text fill="#7f7f7f" stroke-width="0" stroke-dasharray="null" stroke-linejoin="null" stroke-linecap="null" stroke-opacity="0.5" opacity="0.66" x="57.06173" y="26.44559" font-size="24" font-family="Arial" text-anchor="middle" xml:space="preserve" id="svg_2" transform="matrix(0.5090032916059294,0,0,0.4646394807800586,6.188138368070053,-1.0057101471126937) " stroke="#191919" font-weight="bold">TTC</text>
+  <text font-weight="bold" stroke="#191919" transform="matrix(0.47463125087938707,0,0,0.6500191337772632,67.99672593600528,7.646630602699406) " xml:space="preserve" text-anchor="middle" font-family="Arial" font-size="24" id="svg_3" y="26.09343" x="-38.95019" stroke-opacity="0.5" stroke-width="0" fill="#000000">Prix Total</text>
+ </g>
+</svg></span>
+
+<span id=TotalPrice style="float:right;Font-size:35px;text-align:right;">
+<!---TOTAL---->
+<!--9999,00-->
+<!---TOTAL---->
+</span>
+</tr>
+</table>
+<!--/div-->
+
+
+
+</div>
+
+
+<!--&#8681;-->
+	
+
+
+<div  id="BatZoneClient" style="position:absolute;top:605px;left:10px;z-index:1000;width:540px;height:185px;background-color: WhiteSmoke;color:grey;">
+
+<table style="width:100%;font-size:1em;color:black;border:0px solid white;font-weight:bold;padding:0px;">
+<caption style="color:red"><span id=WarnAdrClientFAct class="Warning" >/!\</span>
+Adresse de FACTURATION de l'impression (Hors coût des Prêts à Poster):
+ </caption>
+<tr><td>
+<label for=CliRaiSoc >Nom/Raison Sociale du client: </label>
+<input style="float:right;" required id=CliRaiSoc Name=CliRaiSoc memorized="memorized" type=text size=41 onfocusout="Majuscule(this);Mnemorize(this);">
+</td></tr>
+<tr><td>
+Adresse :
+<input id=CliNoAdress name=CliNoAdress type=text placeholder="N°" size=1></input>
+<SELECT id=CliBisTer  name=CliBisTer type="select"><option>,</option><option>bis</option><option>ter</option></SELECT>
+<input id=CliAdrVoie name=CliAdrVoie type=text placeholder="nom de voie " size=20>
+,<input id=CliAdrPlus name=CliAdrPlus type=text placeholder="complément adressse" size=20 style="float:right"></input>
+</td></tr>
+<tr><td><label for=CliCodPost>CODE POSTAL : </label>
+<input id=CliCodPost name=CliCodPost type=text size=2 >
+<label for=CliCityName>VILLE :  </label>
+<input id=CliCityName name=CliCityName type=text >
+<label for=CliCityCedex>CEDEX:</label>
+<input id=CliCityCedex name=CliCityCedex type=text size=2 style="float:right">
+</td></tr>
+<tr><td>
+<label for=CliName>Nom d'un contact "Commande" :</label>
+<input id=CliName name=CliName type=text size=35  style="float:right">
+</td></tr>
+<tr><td>
+<label for=CliTelFix> TEL-FIXE : </label>
+<input id=CliTelFix name=CliTelFix type=text >
+<label for=CliTelPort> Portable : </label> <input id=CliTelPort name=CliTelPort type=text style="float:right">
+</td></tr>
+<tr><td>
+<label for=ClieEMel >E-MAIL : </label>
+<input id=ClieEMel name=ClieEMel type=text >
+<!--
+<label for=ClientContactMeBeforArobasePart >@ </label><input type=text id=ClientContactMeBeforArobasePart name=ClientContactMeBeforArobasePart>
+<label for=ClientContactMelAfterLastPointPart </label>.<input type=text size=2 id=ClientContactMelAfterArobasePart name=ClientContactMelAfterArobasePart> --->
+<span id=EMelClientAdress class="Warning" >/!\</span> 
+</td></tr>
+</table>
+
+</div>
+
+<div  id="BatZoneValid" style="position:absolute;top:605px;left:555px;z-index:1000;width:540px;height:185px;background-color: WhiteSmoke;;font-size:14px;" ><span id=WarnAdrClientFAct class="Warning" >/!\</span>
+<font style="font-weight:bold;color:red;font-size:16px">En signant cette commande le client s'engage à regler les frais d'impressions</font>
+<bR><input id=CheckBoxCheque name=CheckBoxCheque type="checkbox">Chèque N°:<input id=NumChequeCmd name=NumChequeCmd  type=text placeholder="(traitement prioritaire)"><span id="DeEnEuros" ></span>   joint à la commande à l'ordre de l'ESAT VALENTIN HAÜY (pour un traitement prioritaire).<br>
+<br>Je sous-signé M.<input id=NomDuSignataire name=NomDuSignataire type=text size=20> déclare :
+<br>&rarr;<input id=CheckIsBAT name=CheckIsBAT type="checkbox"><label for=isBAT>Bon A Tirer ce visuel ( <span id="EnCouleur" ></span> conforme à la demande du client ) </label> 
+<br>&rarr;<input id=CheckIsCmd name=CheckIsCmd type="checkbox"><label for=isCmd>que le client,désigné ci-contre, est bien informé de ses frais d'impressions.<br> <textarea placeholder="En guise de signature vous pouvez saisir 'Je valide cette commande.' et valider avec la touche Entrée." alt="En guise de signature vous pouvez saisir 'Je valide cette commande.' et valider avec la touche Entrée." id=Sign  rows=3 style="width:80%;height:38px;border:0px;background:WhiteSmoke;">
+Votre Signature : </textarea>
+<button id="Enter" onclick="javascript:Hop();">Entrée</button>
+</div>
+
+</Form>
+
+<!---In The Bat Space --->
+<div id="TheBatText" style=			"position:absolute;z-index:10000;height:180px;width:270px;top:200px;left:375px;border:2px;border-color:black;background-color: WhiteSmoke;font-family: Arial;font-size: 12px;text-align: justify;font-weight:lighter;" >
+&rarr;&nbsp;Ceci est un <u>« Bon A Tirer »</u> (BAT) pour l'impression d'enveloppes avec le Visuel ici<br>
+&larr;a gauche  
+<br>&#9745;&#65039;&nbsp;Ce document certifie que ce visuel est conforme à la demande du client, veuillez CONTROLER L'EXACTITUDE de toutes les informations à imprimer (adresse, N° de Tél ect.) car :<br><font color=red> VOTRE SIGNATURE dégage notre responsabilité. </font> 
+<br><br>&#9745;&#65039;&nbsp;Ce Bon A Tirer sera à nous Retourner signé avec la mention  « Bon A Tirer » afin de lancer les impressions !
+</div>
+
+<div id="MenuArrow"  style="position:absolute;z-index:10000;height:64px;width:45px;top:110px;left:460px;border: 0px solid;border-color:white;background-color: transparent;font-family: cursive;font-size:24px;" >
+<center><a class=iLink href="http://iescolore.github.io/#BonDeCommandePap" target="_blank">&#8681;</a><a class=iLink href="javascript:download();" onclick="download();">&#128190;</a></center>
+</div>	
+
+<div id="TheQrCode" ></div>
+
+<div id="FentreAdressage" style="position:absolute;z-index:10000;height:140px;width:400px;top:390px;left:375px;border: 2px solid #73AD21;border-radius:15px;border-color:black;background-color: white;font-family: cursive;text-align:center;font-weight:bold;">
+<br> A l'ATTENTION DE 
+<br> La personne en charge des Prêt-à-Poster 
+<br> 
+<br> 
+</div>
+
+<div id="SousFentreAdressage" style="position:absolute;z-index:10000;height:25px;width:400px;top:540px;left:375px;border: 2px solid #73AD21;border-radius:15px;border-color:black;background-color: white;font-family: Arial;padding:15px;font-size: 12px;">
+
+</div>
+<div id="Infographist" style="position:absolute;z-index:10000;height:25px;width:300px;top:540px;left:12px;border: 2px solid #73AD21;border-radius:15px;border-color:black;background-color: white;font-family: Arial;padding:15px;font-size: 12px;">
+<label for=VisualFileLoader ></label><input id=VisualFileLoader type="file" accept="images/*" style="visibility:nohidden;" onchange="LoadVisual();"> 
+</div>
+
+
+
+<!--Left header of BAT --->
+<div id="TheiBAt" style="position:absolute;top:-25x;left:0px">
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="BAT-Bon de COMMANDE-ALL-LAYER.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.64961826,-0.17597669,0.19813096,0.57698035,93.917988,54.159704)"
+       y2="63.585999"
+       y1="63.585999"
+       x2="-0.87814999"
+       x1="-15.955"
+       id="linearGradient4675">
+      <stop
+         id="stop5377"
+         offset="0"
+         stop-color="#fcfbff" />
+      <stop
+         id="stop5379"
+         offset="1"
+         stop-opacity="0"
+         stop-color="#008000" />
+    </linearGradient>
+    <radialGradient
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.0555186,0,0,3.5744117,84.942486,-270.27053)"
+       r="1.252"
+       cy="109.78"
+       cx="-16.607"
+       id="radialGradient11542">
+      <stop
+         id="stop5382"
+         offset="0"
+         stop-color="#f4faf9" />
+      <stop
+         id="stop5384"
+         offset="1"
+         stop-opacity="0"
+         stop-color="#f4faf9" />
+    </radialGradient>
+    <radialGradient
+       id="radialGradient11542-5"
+       cx="-16.607"
+       cy="109.78"
+       r="1.252"
+       gradientTransform="matrix(4.0555186,0,0,3.5744117,146.17463,-333.77053)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         stop-color="#f4faf9"
+         offset="0"
+         id="stop5382-6" />
+      <stop
+         stop-color="#f4faf9"
+         stop-opacity="0"
+         offset="1"
+         id="stop5384-7" />
+    </radialGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="593.86866"
+     inkscape:cy="517.85955"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1708"
+     inkscape:window-height="669"
+     inkscape:window-x="419"
+     inkscape:window-y="79"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="BAT-Bon de Commande"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-2.5,-92.5)"
+     style="display:inline">
+    <g
+       id="layer3"
+       inkscape:label="FORMULAIRE"
+       style="display:none"
+       transform="translate(2.5125098,91.151299)" />
+	           style="font-weight:bold;font-size:7.02750015px;text-anchor:middle;fill:#532e88;stroke:#000000;stroke-width:0">{</text>
+     
+    <text
+       id="text5418"
+       xml:space="preserve"
+       style="font-style:italic;font-weight:400;font-size:2.41009998px;line-height:125%;font-family:Tahoma;letter-spacing:0px;word-spacing:0px;fill:#000000;stroke-width:0.1205"
+       word-spacing="0px"
+       letter-spacing="0px"
+       font-weight="400"
+       font-style="italic"
+       font-size="2.4101px"
+       y="142.2803"
+       x="109.95602"><tspan
+         id="tspan5416"
+         y="36.832451"
+         x="12.055034"
+         style="stroke-width:0.1205"><tspan
+           id="tspan5414"
+           font-weight="400"
+           font-style="italic"
+           font-size="2.4101px"
+           dy="0"
+           dx="0"
+           style="font-style:italic;font-weight:400;font-size:2.41009998px;font-family:Tahoma;fill:#0066cc;stroke-width:0.1205" /></tspan></text>
+    <flowRoot
+       id="flowRoot5426"
+       xml:space="preserve"
+       style="font-size:12px;line-height:1.25;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;stroke-width:1px"
+       word-spacing="0px"
+       letter-spacing="0px"
+       font-size="12px"
+       transform="matrix(0.26458,0,0,0.26458,12.055034,120.86682)"><flowRegion
+         id="flowRegion5422"><rect
+           id="rect5420"
+           height="76.266998"
+           width="201.02"
+           y="69.420998"
+           x="108.59" /></flowRegion><flowPara
+         id="flowPara5424" /></flowRoot>    <flowRoot
+       id="flowRoot5434"
+       xml:space="preserve"
+       style="font-size:12px;line-height:1.25;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;stroke-width:1px"
+       word-spacing="0px"
+       letter-spacing="0px"
+       font-size="12px"
+       transform="translate(12.055034,33.866823)"><flowRegion
+         id="flowRegion5430"><rect
+           id="rect5428"
+           height="59.598999"
+           width="198.49001"
+           y="59.32"
+           x="100.01" /></flowRegion><flowPara
+         id="flowPara5432" /></flowRoot>    <flowRoot
+       id="flowRoot5448"
+       xml:space="preserve"
+       style="font-size:12px;line-height:1.25;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;stroke-width:1px"
+       word-spacing="0px"
+       letter-spacing="0px"
+       font-size="12px"
+       transform="translate(-4.982966,31.117823)"><flowRegion
+         id="flowRegion5444"><rect
+           id="rect5442"
+           height="106.07"
+           width="86.070999"
+           y="-17.659"
+           x="-5.7143002" /></flowRegion><flowPara
+         id="flowPara5446" /></flowRoot>    <flowRoot
+       id="flowRoot5523"
+       xml:space="preserve"
+       style="font-size:12px;line-height:1.25;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;stroke-width:1px"
+       word-spacing="0px"
+       letter-spacing="0px"
+       font-size="12px"
+       transform="matrix(0.26458,0,0,0.26458,13.628034,121.33882)"><flowRegion
+         id="flowRegion5519"><rect
+           id="rect5517"
+           height="20.179001"
+           width="36.574001"
+           y="55.492001"
+           x="231.64" /></flowRegion><flowPara
+         id="flowPara5521" /></flowRoot>    <flowRoot
+       id="flowRoot5531"
+       xml:space="preserve"
+       style="font-size:12px;line-height:1.25;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;stroke-width:1px"
+       word-spacing="0px"
+       letter-spacing="0px"
+       font-size="12px"
+       transform="matrix(0.26458,0,0,0.26458,13.628034,121.33882)"><flowRegion
+         id="flowRegion5527"><rect
+           id="rect5525"
+           height="17.656"
+           width="33.631001"
+           y="76.091003"
+           x="232.06" /></flowRegion><flowPara
+         id="flowPara5529" /></flowRoot>    <g
+       id="g484"
+       transform="matrix(1.0285366,0,0,1.1325562,-6.3439263,-38.04705)">
+      <g
+         transform="matrix(0.14141,0,0,0.19552,70.17722,134.42566)"
+         id="gBAT-BON-DE-COMMANDE">
+        <g
+           font-size="26.845px"
+           font-weight="400"
+           letter-spacing="0px"
+           word-spacing="0px"
+           id="g5561"
+           style="font-weight:400;font-size:26.84499931px;font-family:Tahoma;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;stroke-width:2.88260007">
+		   
+          <text
+             transform="scale(1.2805,0.78096)"
+             x="3245.8296"
+             y="2258.2734"
+             text-align="end"
+             style="line-height:116.95561409%;text-align:end"
+             xml:space="preserve"
+             id="text5551"><tspan
+               x="895.48975"
+               y="-69.882126"
+               font-size="57.654px"
+               font-weight="700"
+               id="tspan5549"
+               style="font-weight:700;font-size:57.65399933px;font-family:Tahoma;fill:#000000;stroke-width:2.88260007">Bon de COMMANDE</tspan></text>
+          <text
+             transform="scale(1.2805,0.78096)"
+             x="2718.1514"
+             y="2311.9568"
+             text-align="end"
+             style="line-height:116.95561409%;text-align:end"
+             xml:space="preserve"
+             id="text5555"><tspan
+               x="367.81131"
+               y="-16.199278"
+               font-size="57.654px"
+               font-weight="700"
+               id="tspan5553"
+               style="font-weight:700;font-size:57.65399933px;font-family:Tahoma;fill:#000000;stroke-width:2.88260007">A</tspan></text>
+          <text
+             transform="scale(1.2805,0.78096)"
+             x="2715.0474"
+             y="2375.1565"
+             text-align="end"
+             style="line-height:116.95561409%;text-align:end"
+             xml:space="preserve"
+             id="text5559"><tspan
+               x="364.7074"
+               y="47.000523"
+               font-size="57.654px"
+               font-weight="700"
+               id="tspan5557"
+               style="font-weight:700;font-size:57.65399933px;font-family:Tahoma;fill:#000000;stroke-width:2.88260007">T</tspan></text>
+        </g>
+      </g>
+            
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="iEscolore"
+     style="display:inline">
+    <g
+       transform="translate(2.7835389,-82.962778)"
+       id="layer1-8"
+       inkscape:label="Calque 1">
+      <g
+         transform="translate(71.304177,51.085824)"
+         style="display:none"
+         inkscape:label="FORMULAIRE"
+         id="layer3-7" />
+      <text
+         x="171.18816"
+         y="78.780304"
+         font-size="2.4101px"
+         font-style="italic"
+         font-weight="400"
+         letter-spacing="0px"
+         word-spacing="0px"
+         style="font-style:italic;font-weight:400;font-size:2.41009998px;line-height:125%;font-family:Tahoma;letter-spacing:0px;word-spacing:0px;fill:#000000;stroke-width:0.1205"
+         xml:space="preserve"
+         id="text5418-1"><tspan
+           style="stroke-width:0.1205"
+           x="73.287178"
+           y="-26.667547"
+           id="tspan5416-5"><tspan
+             style="font-style:italic;font-weight:400;font-size:2.41009998px;font-family:Tahoma;fill:#0066cc;stroke-width:0.1205"
+             dx="0"
+             dy="0"
+             font-size="2.4101px"
+             font-style="italic"
+             font-weight="400"
+             id="tspan5414-8" /></tspan></text>
+      <flowRoot
+         transform="matrix(0.26458,0,0,0.26458,73.287177,57.366824)"
+         font-size="12px"
+         letter-spacing="0px"
+         word-spacing="0px"
+         style="font-size:12px;line-height:1.25;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;stroke-width:1px"
+         xml:space="preserve"
+         id="flowRoot5426-4"><flowRegion
+           id="flowRegion5422-0"><rect
+             x="108.59"
+             y="69.420998"
+             width="201.02"
+             height="76.266998"
+             id="rect5420-5" /></flowRegion><flowPara
+           id="flowPara5424-5" /></flowRoot>      <flowRoot
+         transform="translate(73.287177,-29.633176)"
+         font-size="12px"
+         letter-spacing="0px"
+         word-spacing="0px"
+         style="font-size:12px;line-height:1.25;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;stroke-width:1px"
+         xml:space="preserve"
+         id="flowRoot5434-1"><flowRegion
+           id="flowRegion5430-2"><rect
+             x="100.01"
+             y="59.32"
+             width="198.49001"
+             height="59.598999"
+             id="rect5428-7" /></flowRegion><flowPara
+           id="flowPara5432-7" /></flowRoot>      <flowRoot
+         transform="translate(56.249177,-32.382176)"
+         font-size="12px"
+         letter-spacing="0px"
+         word-spacing="0px"
+         style="font-size:12px;line-height:1.25;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;stroke-width:1px"
+         xml:space="preserve"
+         id="flowRoot5448-6"><flowRegion
+           id="flowRegion5444-1"><rect
+             x="-5.7143002"
+             y="-17.659"
+             width="86.070999"
+             height="106.07"
+             id="rect5442-1" /></flowRegion><flowPara
+           id="flowPara5446-4" /></flowRoot>      <flowRoot
+         transform="matrix(0.26458,0,0,0.26458,74.860177,57.838824)"
+         font-size="12px"
+         letter-spacing="0px"
+         word-spacing="0px"
+         style="font-size:12px;line-height:1.25;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;stroke-width:1px"
+         xml:space="preserve"
+         id="flowRoot5523-1"><flowRegion
+           id="flowRegion5519-3"><rect
+             x="231.64"
+             y="55.492001"
+             width="36.574001"
+             height="20.179001"
+             id="rect5517-7" /></flowRegion><flowPara
+           id="flowPara5521-9" /></flowRoot>      <flowRoot
+         transform="matrix(0.26458,0,0,0.26458,74.860177,57.838824)"
+         font-size="12px"
+         letter-spacing="0px"
+         word-spacing="0px"
+         style="font-size:12px;line-height:1.25;font-family:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;stroke-width:1px"
+         xml:space="preserve"
+         id="flowRoot5531-0"><flowRegion
+           id="flowRegion5527-9"><rect
+             x="232.06"
+             y="76.091003"
+             width="33.631001"
+             height="17.656"
+             id="rect5525-5" /></flowRegion><flowPara
+           id="flowPara5529-9" /></flowRoot>      <g
+         transform="translate(-70.613371,30.983326)"
+         inkscape:label="#giEscole"
+         id="Cartouche-iEscolore">
+        <title
+           id="title4239">ESAT VALENTIN HAUY</title>
+        <rect
+           ry="0.39325285"
+           rx="1.5730139"
+           y="51.346329"
+           x="70.991348"
+           height="48.409103"
+           width="118.40911"
+           id="rect5713"
+           style="fill:#0067fb;fill-opacity:0.03105588;stroke:none;stroke-width:1.59089255;stroke-miterlimit:0.80000001;stroke-dasharray:none;stroke-opacity:1" />
+        <a
+           style="stroke:#000000;stroke-opacity:0.37824001"
+           transform="matrix(1.2301379,0,0,1.2301379,69.503824,-52.880834)"
+           id="a5392"
+           xlink:target="_blank"
+           xlink:title="Lien vers notre page Web iEscolore"
+           xlink:href="http://iescolore.github.io">
+          <rect
+             style="fill:#39ca3b;fill-opacity:0.37234;stroke:#000000;stroke-width:0.66829002;stroke-miterlimit:0.80000001;stroke-opacity:0.37824001"
+             onmouseover="setAttribute('fill-opacity','1.0');"
+             onmouseout="setAttribute('fill-opacity','0.37234042');"
+             onclick="alert(&quot;/!\&quot;)"
+             stroke-miterlimit=".8"
+             ry="2.534919"
+             rx="2.6522229"
+             height="15.226"
+             width="16.82"
+             y="88.848999"
+             x="5.2926998"
+             id="LogoIEscolore" />
+        </a>
+        <a
+           xlink:title="Appeler"
+           transform="matrix(1.8601751,0,0,1.7020515,78.504832,-108.66456)"
+           id="a5410"
+           xlink:href="Tel:04 73 73 38 96">
+          <text
+             id="text5408"
+             xml:space="preserve"
+             style="font-weight:400;font-size:1.10918939px;line-height:116.95561409%;font-family:Tahoma;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;stroke-width:0.11910843"
+             word-spacing="0px"
+             text-align="end"
+             letter-spacing="0px"
+             font-weight="400"
+             font-size=".96393px"
+             y="189.31091"
+             x="151.44255"
+             transform="scale(0.9409646,1.0627392)"><tspan
+               style="stroke-width:0.11910843"
+               id="tspan5396"
+               y="91.451607"
+               x="54.32962"><tspan
+                 style="font-weight:400;font-size:1.10918939px;font-family:Tahoma;fill:#000000;stroke-width:0.11910843"
+                 id="tspan5394"
+                 font-weight="400"
+                 font-size=".96393px"
+                 dy="0"
+                 dx="0" /></tspan><tspan
+               style="font-weight:700;font-size:2.38216877px;font-family:Tahoma;fill:#000000;stroke-width:0.11910843"
+               id="tspan5406"
+               font-weight="700"
+               font-size="2.0702px"
+               y="93.114624"
+               x="54.32962"><tspan
+                 style="stroke-width:0.11910843"
+                 id="tspan5398"
+                 dy="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+                 dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0">Tél.: 04 73 73 38 96 </tspan></tspan></text>
+        </a>
+        <path
+           style="fill:none;stroke:#ff0000;stroke-width:0.75007671px;stroke-linecap:round;stroke-linejoin:round"
+           inkscape:connector-curvature="0"
+           id="path5436"
+           d="m 168.84225,73.529944 c -0.97987,0 -1.79638,0.68899 -1.79638,1.51578 v 5.78761 c 0,0.68899 0.81657,1.37798 1.79638,1.37798 h 18.12719 c 0.97987,0 1.79638,-0.68899 1.79638,-1.37798 v -5.78761 c 0,-0.82679 -0.81657,-1.51578 -1.79638,-1.51578 z" />
+        <g
+           transform="translate(75.445497,-25.834533)"
+           id="g5832">
+          <path
+             d="m 97.480132,95.193081 9.564808,0.04951 -4.71141,-7.467939 -4.830661,7.332561 9.637401,0.109948 -4.73432,-7.381926 z"
+             id="path5438"
+             inkscape:connector-curvature="0"
+             style="fill:#008000;stroke:#f90000;stroke-width:5.55716467" />
+          <path
+             d="m 99.526418,93.999789 5.145782,0.02663 -2.53474,-4.017666 -2.598916,3.944816 5.184856,0.05909 -2.54704,-3.971442 z"
+             id="path5440"
+             style="fill:url(#linearGradient4675);stroke:#feffff;stroke-width:2.98976731"
+             inkscape:connector-curvature="0" />
+        </g>
+        <a
+           xlink:title="Accéder au Site de l'imprimerie"
+           id="a5456"
+           xlink:href="http://iescolore.github.io"
+           transform="matrix(1.0787563,0,0,1.6774667,60.530814,-87.484808)">
+          <text
+             transform="scale(1.3236776,0.75547097)"
+             id="text5454"
+             xml:space="preserve"
+             style="font-style:italic;font-weight:400;font-size:3.19019532px;line-height:125%;font-family:Tahoma;letter-spacing:0px;word-spacing:0px;fill:#000000;stroke-width:0.15950315"
+             word-spacing="0px"
+             letter-spacing="0px"
+             font-weight="400"
+             font-style="italic"
+             font-size="2.4101px"
+             y="128.83159"
+             x="26.033592"><tspan
+               style="stroke-width:0.15950315"
+               id="tspan5452"
+               y="128.83159"
+               x="26.033592"><tspan
+                 style="font-style:italic;font-weight:400;font-size:3.19019532px;font-family:Tahoma;fill:#0066cc;stroke-width:0.15950315"
+                 id="tspan5450"
+                 font-weight="400"
+                 font-style="italic"
+                 font-size="2.4101px"
+                 dy="0"
+                 dx="0">https://iescolore.github.io</tspan></tspan></text>
+        </a>
+        <ellipse
+           style="fill:url(#radialGradient11542-5);stroke-width:1.23013783"
+           id="ellipse5458"
+           ry="4.4752417"
+           rx="5.0776401"
+           cy="58.631168"
+           cx="78.823967" />
+        <g
+           id="g5478"
+           transform="matrix(1.2301379,0,0,1.2301379,69.437746,-45.313655)">
+          <a
+             id="a5472"
+             xlink:title="Lien vers le Site Escolore.org"
+             xlink:href="http://www.escolore.org/">
+            <ellipse
+               style="fill:#0067fb;fill-opacity:0.37234"
+               id="ellipse5470"
+               onmouseover="setAttribute('fill-opacity','1.0')"
+               onmouseout="setAttribute('fill-opacity','0.37234042')"
+               ry="1.8338"
+               rx="1.9674"
+               cy="90.891998"
+               cx="28.396999" />
+          </a>
+          <a
+             id="a5476"
+             xlink:title="Lien vers le Site Escolore.org"
+             xlink:href="http://www.escolore.org/">
+            <path
+               style="stroke-width:0.046327"
+               inkscape:connector-curvature="0"
+               id="path5474"
+               d="m 28.153,95.239 c -0.71154,-0.34397 -0.68272,-1.4677 0.04002,-1.5604 0.5455,-0.06993 1.0262,0.54312 0.86839,1.1075 -0.06484,0.23186 -0.19226,0.39013 -0.39547,0.49118 -0.17538,0.08721 -0.26759,0.08033 -0.51293,-0.03827 z m 0.54828,-0.37159 c 0.14262,-0.13631 0.15944,-0.44688 0.03233,-0.59686 -0.18246,-0.21528 -0.4802,-0.26013 -0.65931,-0.09931 -0.08461,0.07597 -0.10968,0.14735 -0.10968,0.31234 0,0.18812 0.02017,0.23079 0.1675,0.35443 0.20853,0.175 0.40613,0.1852 0.56915,0.02939 z m 0.94819,0.0093 c -0.13313,-0.2301 -0.31837,-0.67734 -0.48206,-1.1639 l -0.26585,-0.79025 0.10543,-0.0816 c 0.05799,-0.04488 0.16757,-0.0816 0.24351,-0.0816 0.16273,0 0.18573,0.04466 0.34979,0.67936 0.1311,0.50717 0.35459,1.5921 0.35459,1.7213 0,0.17218 -0.09028,0.08842 -0.30541,-0.28336 z m -3.0827,-0.02899 c -0.43324,-0.19111 -0.55406,-0.52892 -0.34438,-0.9629 0.13553,-0.28052 0.31357,-0.46296 0.57726,-0.59154 0.32566,-0.15879 1.0703,-0.16645 1.0703,-0.01102 0,0.04945 -0.06328,0.06588 -0.25362,0.06588 -0.42066,0 -0.71256,0.25593 -0.86554,0.7589 -0.11946,0.39276 -0.0042,0.60879 0.35596,0.66694 0.32324,0.0522 0.21896,0.1602 -0.15287,0.15833 -0.10864,-5.47e-4 -0.28282,-0.03862 -0.38707,-0.08461 z m 4.1934,-0.31706 c -0.49788,-0.15305 -0.78751,-0.50957 -0.74638,-0.91873 0.07578,-0.75379 1.2368,-0.70722 1.5734,0.06312 0.09231,0.21121 0.09325,0.36592 0.0032,0.5323 -0.14024,0.2592 -0.53668,0.41357 -0.83029,0.32331 z m 0.42679,-0.40946 c 0.07711,-0.05208 0.12386,-0.13256 0.13393,-0.23057 0.04221,-0.41105 -0.45755,-0.65029 -0.79371,-0.37994 -0.19894,0.16 -0.20015,0.36732 -0.0032,0.55552 0.21016,0.20086 0.4211,0.21836 0.66301,0.05499 z m -6.1484,-0.0274 c -0.14332,-0.09594 -0.23038,-0.38297 -0.15629,-0.51528 0.09474,-0.16919 0.16956,-0.0857 0.15282,0.17053 -0.01162,0.1778 7.01e-4,0.23316 0.05189,0.23316 0.0919,0 0.17624,-0.1012 0.41518,-0.4982 0.40529,-0.67338 0.64958,-0.90581 0.95199,-0.90581 0.21601,0 0.44659,0.21177 0.40462,0.3716 -0.03479,0.13248 -0.20218,0.30776 -0.29391,0.30776 -0.0868,0 -0.08643,-0.01801 0.0038,-0.18474 0.14641,-0.2706 -0.06502,-0.30565 -0.31996,-0.05303 -0.09427,0.09341 -0.3035,0.36346 -0.46494,0.6001 -0.16144,0.23664 -0.32728,0.45574 -0.36852,0.48687 -0.10125,0.07644 -0.25079,0.07129 -0.37665,-0.01296 z m 7.2146,-0.51272 c -0.28223,-0.16628 -1.3031,-1.2524 -1.3031,-1.3864 0,-0.09762 0.13364,-0.17186 0.25636,-0.14242 0.06349,0.01523 0.18472,0.08341 0.2694,0.15151 0.08468,0.0681 0.16104,0.10378 0.16969,0.07927 0.07249,-0.20538 0.30609,-0.43848 0.37419,-0.3734 0.01267,0.01211 0.02879,0.19296 0.03582,0.40189 0.01449,0.43079 0.09411,0.61879 0.40968,0.96728 0.20893,0.23072 0.21754,0.25206 0.13392,0.33199 -0.07975,0.07622 -0.18081,0.06753 -0.34592,-0.02975 z m -7.9386,-0.31795 c -0.36284,-0.111 -0.83864,-0.36053 -0.95393,-0.5003 -0.18645,-0.22602 -0.0038,-0.6693 0.49742,-1.2075 0.21268,-0.22834 1.0198,-0.84193 1.3526,-1.0282 l 0.14447,-0.08088 0.11334,0.1716 c 0.06233,0.09438 0.24746,0.39414 0.4114,0.66613 l 0.29806,0.49453 -0.10943,0.08469 c -0.17533,0.1357 -0.25593,0.08775 -0.2892,-0.17203 -0.06969,-0.54427 -0.40499,-0.80036 -0.82717,-0.63176 -0.5774,0.23058 -0.53115,0.56082 0.1502,1.0726 0.16693,0.12538 0.30352,0.2552 0.30352,0.28849 0,0.05798 -0.21564,0.24825 -0.28135,0.24825 -0.0174,0 -0.07101,-0.10465 -0.11913,-0.23256 -0.14303,-0.38016 -0.47124,-0.67325 -0.75393,-0.67325 -0.23192,0 -0.58614,0.55671 -0.53146,0.83527 0.05306,0.27031 0.31754,0.42906 0.79898,0.47957 0.36496,0.03829 0.46209,0.09131 0.3673,0.20048 -0.07777,0.08956 -0.24373,0.08516 -0.57165,-0.01515 z m 3.4843,-0.69499 c -0.38355,-0.13003 -0.87774,-0.54194 -1.0587,-0.88239 -0.22991,-0.43262 -0.24476,-1.0956 -0.0344,-1.536 0.46144,-0.9661 1.7741,-1.3154 2.7104,-0.72126 0.28476,0.1807 0.49243,0.42574 0.67048,0.79111 0.23845,0.48932 0.14239,1.2518 -0.21442,1.7019 -0.19998,0.25226 -0.67989,0.58318 -0.94956,0.65476 -0.22541,0.05983 -0.93858,0.05469 -1.1238,-0.0081 z m 0.27889,-0.13422 c 0.02137,0.03304 0.66885,0.04339 0.66885,0.01069 0,-0.005 0.05164,-0.0181 0.11475,-0.0292 0.06311,-0.0111 0.14717,-0.04525 0.1868,-0.07589 0.0595,-0.04601 0.06501,-0.04388 0.03162,0.01222 -0.02224,0.03736 0.01236,0.02208 0.07688,-0.03397 0.06452,-0.05605 0.13816,-0.1019 0.16363,-0.1019 0.07157,0 0.45152,-0.38643 0.41462,-0.42169 -0.01796,-0.01717 0.0029,-0.03121 0.04632,-0.03121 0.04344,0 0.07645,-0.01529 0.07337,-0.03397 -0.0031,-0.01868 -4.27e-4,-0.04925 0.0059,-0.06794 0.0063,-0.01868 0.01599,-0.04925 0.02143,-0.06794 0.0054,-0.01868 0.03798,-0.09511 0.0723,-0.16984 0.07588,-0.16521 0.09763,-0.8089 0.03367,-0.99639 -0.0255,-0.07473 -0.08065,-0.17504 -0.12257,-0.22292 -0.06194,-0.07073 -0.0629,-0.07971 -0.0051,-0.04792 0.05895,0.03245 0.06104,0.02727 0.01226,-0.03035 -0.03235,-0.03821 -0.04301,-0.08615 -0.02369,-0.10654 0.01932,-0.02038 0.01132,-0.02408 -0.01777,-0.0082 -0.02909,0.01586 -0.09307,-0.01619 -0.14216,-0.07122 -0.08812,-0.09877 -0.08805,-0.09922 0.0055,-0.03528 0.05213,0.03563 -0.01056,-0.04068 -0.1393,-0.16958 -0.12874,-0.12889 -0.24274,-0.22608 -0.25332,-0.21596 -0.01058,0.01011 -0.09342,-0.02143 -0.18408,-0.07009 -0.09381,-0.05036 -0.1496,-0.06361 -0.12948,-0.03076 0.01945,0.03175 -0.01096,0.0189 -0.06756,-0.02855 -0.05661,-0.04745 -0.10292,-0.07043 -0.10292,-0.05107 0,0.01937 -0.03009,0.01134 -0.06686,-0.01782 -0.04798,-0.03806 -0.07593,-0.03901 -0.09899,-0.0033 -0.01889,0.02921 -0.0548,0.03364 -0.08714,0.01074 -0.06565,-0.04648 -0.22248,-0.04543 -0.30052,0.002 -0.03078,0.01871 -0.06957,0.01297 -0.0862,-0.01275 -0.01663,-0.02572 -0.05542,-0.03174 -0.0862,-0.01337 -0.03078,0.01837 -0.09693,0.03949 -0.14701,0.04693 -0.05008,0.0074 -0.12348,0.03861 -0.1631,0.06925 -0.0595,0.04601 -0.06501,0.04388 -0.03162,-0.01222 0.02224,-0.03737 -0.01976,-0.01698 -0.09332,0.04529 -0.07356,0.06227 -0.11635,0.08265 -0.09509,0.04529 0.02126,-0.03736 -0.02861,-0.0081 -0.11083,0.06509 -0.08222,0.07316 -0.14949,0.11586 -0.14949,0.09488 0,-0.02098 -0.04278,-0.0011 -0.09506,0.04409 -0.05229,0.04523 -0.0839,0.0929 -0.07025,0.10595 0.01365,0.01305 -0.04371,0.0913 -0.12747,0.17389 -0.08376,0.08259 -0.13483,0.15017 -0.1135,0.15017 0.02134,0 0.0095,0.03448 -0.02625,0.07663 -0.05607,0.06607 -0.05524,0.07124 0.006,0.0375 0.0517,-0.02846 0.04878,-0.01474 -0.01071,0.05029 -0.04499,0.04918 -0.09138,0.1393 -0.1031,0.20027 -0.01172,0.06097 -0.02526,0.11086 -0.0301,0.11086 -0.0309,0 -0.01959,0.4403 0.01179,0.45883 0.02139,0.01264 0.026,0.04293 0.01023,0.06731 -0.01577,0.02438 -0.01262,0.07902 0.007,0.12142 0.01961,0.0424 0.03749,0.10962 0.03974,0.14939 0.0023,0.03976 0.03336,0.106 0.06913,0.14719 0.03577,0.04119 0.05024,0.0749 0.03216,0.0749 -0.01808,0 8.25e-4,0.03221 0.04202,0.07159 0.0412,0.03937 0.06246,0.09083 0.04725,0.11435 -0.01521,0.02352 5.89e-4,0.03716 0.03511,0.03032 0.03451,-0.0068 0.05742,0.01303 0.05091,0.04417 -0.0065,0.03114 0.0214,0.05661 0.06203,0.05661 0.04063,0 0.06219,0.01807 0.04791,0.04016 -0.01428,0.02209 0.0099,0.06794 0.05369,0.1019 0.06854,0.05313 0.07381,0.05226 0.03777,-0.0062 -0.03604,-0.05846 -0.03077,-0.05932 0.03777,-0.0062 0.04381,0.03396 0.06581,0.08491 0.04888,0.11323 -0.01692,0.02832 -0.01309,0.03615 0.0085,0.01741 0.02161,-0.01874 0.07834,-2.94e-4 0.12606,0.04099 0.04772,0.04128 0.08677,0.05921 0.08677,0.03984 0,-0.01937 0.03426,-0.008 0.07614,0.02518 0.14387,0.11412 0.27812,0.16323 0.33428,0.12229 0.03213,-0.02343 0.06612,-0.02294 0.08171,0.0012 z m -0.91861,-2.6356 c 0,-0.0094 0.03732,-0.04507 0.08293,-0.07926 0.07516,-0.05633 0.07683,-0.05473 0.01789,0.0171 -0.06191,0.07544 -0.10082,0.09943 -0.10082,0.06216 z m 5.6247,2.6423 c -0.45355,-0.38157 -0.6009,-1.0028 -0.2971,-1.2525 0.16325,-0.13421 0.28673,-0.13232 0.43208,0.0066 0.14472,0.13832 0.14788,0.29838 0.01049,0.53201 l -0.10583,0.17996 0.19877,0.1772 c 0.25699,0.22911 0.43016,0.23793 0.59998,0.03054 0.08885,-0.1085 0.13394,-0.13342 0.17332,-0.09578 0.07382,0.07055 -0.04492,0.27994 -0.26208,0.46218 -0.25029,0.21004 -0.46595,0.19848 -0.74963,-0.04018 z m 0.12883,-0.93323 c 0.01641,-0.04087 -0.0031,-0.1224 -0.04341,-0.18116 -0.14154,-0.20645 -0.42208,-0.07896 -0.31598,0.1436 0.0637,0.13361 0.31047,0.15941 0.35939,0.03757 z m 1.1519,-1.1069 c -0.46818,-0.06048 -1.0974,-0.33357 -2.1667,-0.94032 -1.2723,-0.72196 -1.8851,-0.96228 -2.7812,-1.0906 -1.4831,-0.21237 -3.3462,0.32163 -4.8034,1.3767 -0.40054,0.29003 -0.61335,0.33513 -0.61335,0.12998 0,-0.24372 0.75041,-0.76922 1.777,-1.2444 0.98542,-0.45611 1.9753,-0.68787 2.938,-0.68787 1.3722,0 2.3774,0.36977 4.1573,1.5293 0.51427,0.33502 1.0154,0.63555 1.1136,0.66784 0.14485,0.04764 3.7402,0.06098 19.05,0.07068 18.809,0.01192 18.872,0.01226 18.872,0.10215 0,0.0496 -0.0053,0.09178 -0.01185,0.09371 -0.10128,0.0301 -37.298,0.02298 -37.532,-0.0072 z" />
+          </a>
+        </g>
+        <a
+           transform="matrix(1.2301379,0,0,1.2301379,69.503824,-52.880834)"
+           id="a5486"
+           xlink:title="Association Valentin Haüy &quot;Avec les Aveugles et Mals Voyants&quot;"
+           xlink:href="https://www.avh.asso.fr/fr">
+          <g
+             style="stroke-width:0.070339"
+             id="g5484"
+             transform="matrix(1.5459,0,0,1.5459,-4.0109,-12.806)">
+            <path
+               style="fill:#e85d23"
+               inkscape:connector-curvature="0"
+               id="path5480"
+               d="m 29.973,69.777 c -0.57764,-0.31234 -1.0217,-1.4012 -0.6472,-1.5871 0.2026,-0.10054 0.38159,0.0285 0.5736,0.41349 0.1911,0.38317 0.49362,0.63737 0.75853,0.63737 0.2894,0 0.61838,-0.3067 0.74576,-0.69526 0.06358,-0.19394 0.15916,-0.36744 0.2124,-0.38555 0.3396,-0.11556 0.39526,0.44909 0.08983,0.91124 -0.11784,0.17831 -0.27896,0.31636 -0.43323,0.37122 -0.13509,0.04804 -0.35603,0.17135 -0.49098,0.27403 -0.28726,0.21856 -0.48856,0.23363 -0.80871,0.06052 z m 3.0501,0.02306 C 32.86682,69.70299 32.85709,69.6491 32.85709,68.88075 v -0.8162 l -0.52602,-0.65379 c -0.59531,-0.7399 -0.65412,-0.97003 -0.25676,-1.0046 0.20042,-0.01743 0.2612,0.02511 0.54412,0.38086 0.17518,0.22026 0.36298,0.40048 0.41735,0.40048 0.05437,0 0.22107,-0.17558 0.37044,-0.39017 0.29214,-0.41969 0.43029,-0.50703 0.64263,-0.40626 0.29541,0.14019 0.25806,0.30326 -0.22384,0.97706 -0.21993,0.30751 -0.22096,0.3137 -0.22096,1.3189 0,0.96855 -0.0068,1.0142 -0.16601,1.113 -0.09131,0.05671 -0.18467,0.10311 -0.20747,0.10311 -0.0228,0 -0.11616,-0.0464 -0.20747,-0.10311 z m -9.3387,-0.04261 c -0.0641,-0.05684 -0.08964,-0.48097 -0.08964,-1.4888 0,-1.4087 7.3e-5,-1.4093 0.17666,-1.5119 0.13429,-0.07802 0.22387,-0.08672 0.37348,-0.03628 0.1942,0.06547 0.19682,0.07503 0.19682,0.7171 0,0.73347 0.04275,0.80972 0.45397,0.80972 0.34555,0 0.42692,-0.08768 0.45628,-0.49166 0.02666,-0.36684 0.1894,-0.52149 0.41561,-0.39496 0.11655,0.06519 0.13072,0.20156 0.13072,1.2581 v 1.185 h -0.52287 l -0.0747,-0.9273 h -0.82166 l -0.02288,0.39512 c -0.01259,0.21732 -0.05872,0.43341 -0.10252,0.48021 -0.10037,0.10724 -0.45077,0.11069 -0.56928,0.0056 z m 2.6462,-0.02101 c -0.06679,-0.05922 -0.12126,-0.14281 -0.12106,-0.18574 2.1e-4,-0.04293 0.21176,-0.5398 0.47013,-1.1041 0.41169,-0.89926 0.49569,-1.0342 0.67966,-1.0915 0.2941,-0.09171 0.42017,0.05794 1.0498,1.2461 0.55543,1.0482 0.57357,1.1802 0.16798,1.2234 -0.16141,0.01716 -0.22003,-0.02458 -0.34879,-0.24838 l -0.15477,-0.26901 -0.46533,1.79e-4 c -0.46121,1.78e-4 -0.46666,0.0024 -0.61473,0.24838 -0.16929,0.28126 -0.46014,0.36061 -0.66288,0.18084 z m 1.3725,-1.0216 c 0,-0.07071 -0.03654,-0.14859 -0.0812,-0.17306 -0.11422,-0.0626 -0.2464,0.07325 -0.1925,0.19782 0.06403,0.14796 0.2737,0.12899 0.2737,-0.02476 z m 1.6583,-0.87822 c -0.11579,-0.10267 -0.11579,-0.46696 0,-0.56963 0.0493,-0.04372 0.16022,-0.07948 0.2465,-0.07948 0.21395,0 0.33613,0.12348 0.33613,0.33969 0,0.31202 -0.36256,0.50456 -0.58263,0.30942 z m 1.9724,-0.0066 c -0.19,-0.1232 -0.13683,-0.47008 0.07619,-0.49703 0.17242,-0.02181 0.40147,0.1408 0.40147,0.28503 0,0.09533 -0.19714,0.29806 -0.28984,0.29806 -0.0303,0 -0.11481,-0.03873 -0.18781,-0.08606 z m -5.6827,-1.2639 c -0.10385,-0.09209 -0.18882,-0.22976 -0.18882,-0.30593 0,-0.07617 0.08497,-0.21384 0.18882,-0.30593 0.15521,-0.13763 0.23166,-0.15929 0.4295,-0.12167 0.34732,0.06604 0.35272,0.07259 0.35272,0.4276 0,0.35501 -0.0054,0.36156 -0.35272,0.4276 -0.19784,0.03762 -0.27429,0.01596 -0.4295,-0.12167 z m 0.52079,-0.30593 c 0,-0.21343 -0.01778,-0.23182 -0.22409,-0.23182 -0.17762,0 -0.22919,0.03191 -0.24867,0.15385 -0.04042,0.25299 0.04095,0.35384 0.26692,0.3308 0.18094,-0.01846 0.20584,-0.04904 0.20584,-0.25282 z m -1.7775,-0.23572 c -0.32931,-0.58783 -0.37382,-0.75781 -0.19844,-0.75781 0.03814,0 0.18784,0.20864 0.33266,0.46365 0.14482,0.25501 0.29462,0.46365 0.33288,0.46365 0.03826,0 0.15986,-0.1784 0.27021,-0.39645 0.23598,-0.46627 0.37899,-0.60249 0.453,-0.43147 0.06816,0.15751 -0.56268,1.2916 -0.71847,1.2916 -0.07352,0 -0.2493,-0.23587 -0.47185,-0.63314 z m 2.6674,0.46803 c -0.15413,-0.20859 -0.09003,-0.45981 0.15343,-0.60126 0.28052,-0.16299 0.71209,0.02104 0.71209,0.30364 0,0.09845 -0.06527,0.12812 -0.31746,0.1443 -0.37412,0.024 -0.42462,0.14369 -0.07328,0.17369 0.31572,0.02696 0.2364,0.14474 -0.09747,0.14474 -0.1897,0 -0.28666,-0.04243 -0.37731,-0.16511 z m 0.62322,-0.38134 c -0.0476,-0.12854 -0.42997,-0.14718 -0.42997,-0.02096 0,0.07175 0.07105,0.10375 0.23031,0.10375 0.1508,0 0.21973,-0.02858 0.19965,-0.08279 z m 1.7113,0.50229 c -0.02739,-0.02429 -0.0498,-0.14547 -0.0498,-0.2693 0,-0.12383 -0.03231,-0.27868 -0.0718,-0.34411 -0.05015,-0.0831 -0.04027,-0.15668 0.03278,-0.24403 0.09999,-0.11957 0.11046,-0.11992 0.23841,-0.0081 0.1112,0.09721 0.11829,0.13904 0.04191,0.24749 -0.12653,0.17965 -0.11538,0.45965 0.02013,0.50576 0.06162,0.02097 0.11204,0.06474 0.11204,0.09727 0,0.06864 -0.25012,0.08022 -0.32368,0.01499 z m 0.54777,-0.34935 c 0,-0.22339 0.03312,-0.40132 0.0747,-0.40132 0.04108,0 0.0747,0.16217 0.0747,0.36039 0,0.19822 -0.03361,0.37881 -0.0747,0.40132 -0.04666,0.02557 -0.0747,-0.1097 -0.0747,-0.36039 z m -3.2866,-0.13638 c 0,-0.26494 0.03201,-0.46365 0.0747,-0.46365 0.04268,0 0.0747,0.19871 0.0747,0.46365 0,0.26494 -0.03201,0.46365 -0.0747,0.46365 -0.04268,0 -0.0747,-0.19871 -0.0747,-0.46365 z m 1.4939,0.10802 v -0.35563 l 0.27769,-0.03996 c 0.42309,-0.06088 0.61866,0.08285 0.61866,0.45468 0,0.35495 -0.13057,0.39875 -0.16356,0.05486 -0.04539,-0.47317 -0.52385,-0.47317 -0.56924,0 -0.03589,0.37409 -0.16356,0.28514 -0.16356,-0.11396 z m 2.1662,0.02836 c 0,-0.35758 0.0065,-0.36569 0.34253,-0.42952 0.32516,-0.06176 0.55077,0.11583 0.57362,0.45152 0.01036,0.15218 -0.01884,0.26918 -0.0713,0.28568 -0.05777,0.01818 -0.09696,-0.07197 -0.11204,-0.25773 -0.02182,-0.2687 -0.03652,-0.28568 -0.24729,-0.28568 -0.2028,0 -0.23078,0.02675 -0.29446,0.2815 -0.09474,0.37899 -0.19107,0.35592 -0.19107,-0.04577 z" />
+            <path
+               style="fill:#532e88"
+               inkscape:connector-curvature="0"
+               id="path5482"
+               d="m 33.023,69.8 c -0.15628,-0.09707 -0.16601,-0.15096 -0.16601,-0.91931 v -0.8162 L 32.33097,67.4107 c -0.59531,-0.7399 -0.65412,-0.97003 -0.25676,-1.0046 0.20042,-0.01743 0.2612,0.02511 0.54412,0.38086 0.17518,0.22026 0.36298,0.40048 0.41735,0.40048 0.05437,0 0.22107,-0.17558 0.37044,-0.39017 0.29214,-0.41969 0.43029,-0.50703 0.64263,-0.40626 0.29541,0.14019 0.25806,0.30326 -0.22384,0.97706 -0.21993,0.30751 -0.22096,0.3137 -0.22096,1.3189 0,0.96855 -0.0068,1.0142 -0.16601,1.113 -0.09131,0.05671 -0.18467,0.10311 -0.20747,0.10311 -0.0228,0 -0.11616,-0.0464 -0.20747,-0.10311 z m -9.3387,-0.04261 c -0.0641,-0.05684 -0.08964,-0.48097 -0.08964,-1.4888 0,-1.4087 7.3e-5,-1.4093 0.17666,-1.5119 0.13429,-0.07802 0.22387,-0.08672 0.37348,-0.03628 0.1942,0.06547 0.19682,0.07503 0.19682,0.7171 0,0.73347 0.04275,0.80972 0.45397,0.80972 0.34555,0 0.42692,-0.08768 0.45628,-0.49166 0.02666,-0.36684 0.1894,-0.52149 0.41561,-0.39496 0.11655,0.06519 0.13072,0.20156 0.13072,1.2581 v 1.185 h -0.52287 l -0.0747,-0.9273 h -0.82166 l -0.02288,0.39512 c -0.01259,0.21732 -0.05872,0.43341 -0.10252,0.48021 -0.10037,0.10724 -0.45077,0.11069 -0.56928,0.0056 z m 2.6462,-0.02101 c -0.06679,-0.05922 -0.12126,-0.14281 -0.12106,-0.18574 2.1e-4,-0.04293 0.21176,-0.5398 0.47013,-1.1041 0.41169,-0.89926 0.49569,-1.0342 0.67966,-1.0915 0.2941,-0.09171 0.42017,0.05794 1.0498,1.2461 0.55543,1.0482 0.57357,1.1802 0.16798,1.2234 -0.16141,0.01716 -0.22003,-0.02458 -0.34879,-0.24838 l -0.15477,-0.26901 -0.46533,1.79e-4 c -0.46121,1.78e-4 -0.46666,0.0024 -0.61473,0.24838 -0.16929,0.28126 -0.46014,0.36061 -0.66288,0.18084 z m 1.3725,-1.0216 c 0,-0.07071 -0.03654,-0.14859 -0.0812,-0.17306 -0.11422,-0.0626 -0.2464,0.07325 -0.1925,0.19782 0.06403,0.14796 0.2737,0.12899 0.2737,-0.02476 z" />
+          </g>
+        </a>
+        <path
+           style="fill:#0067fb;stroke-width:0.37243655"
+           inkscape:connector-curvature="0"
+           id="path5488"
+           d="m 83.095618,71.918494 c -0.26945,-0.44513 -0.434411,-1.59082 -0.331326,-2.30134 0.05207,-0.35877 0.357552,-0.484576 0.957835,-0.39442 0.822937,0.12359 0.84722,-0.009 0.366089,-2.01312 -0.448398,-1.86698 -0.652096,-2.156678 -1.569164,-2.231962 -0.774409,-0.0636 -1.141211,-0.353886 -1.383413,-1.095057 -0.181249,-0.55473 -0.126298,-1.125293 0.122128,-1.267903 0.248389,-0.142634 1.977939,-0.221338 3.84332,-0.174913 l 3.391736,0.08439 0.756756,3.104376 c 0.467477,1.917662 0.974737,3.104376 1.327073,3.104376 1.107924,0 1.67963,0.652163 1.763403,2.011513 l 0.08473,1.37505 -4.554586,0.0812 c -3.375621,0.0602 -4.611541,-0.0129 -4.774657,-0.28221 z m 6.158685,-0.47127 2.235899,-0.0332 -0.238905,-1.05829 c -0.131404,-0.58206 -0.324376,-0.83607 -0.428839,-0.56442 -0.182282,0.47392 -1.575314,0.71837 -1.608282,0.28219 -0.0086,-0.11649 -0.408492,-1.735597 -0.888197,-3.598149 l -0.872192,-3.38658 -2.55229,-0.08537 c -2.429891,-0.08119 -2.55229,-0.05167 -2.55229,0.615351 0,0.50972 0.298776,0.725228 1.096446,0.790832 0.945607,0.07774 1.178116,0.361955 1.689964,2.065647 0.326454,1.086532 0.607147,2.403074 0.623766,2.92563 0.02591,0.81478 -0.109839,0.92909 -0.952779,0.80252 -0.800807,-0.12031 -0.982954,-0.009 -0.98288,0.602049 9.2e-5,0.66525 0.179957,0.74547 1.597334,0.71238 0.878491,-0.0206 2.603341,-0.0522 3.83311,-0.0705 z M 83.32553,61.109151 c -0.966962,-0.591007 -1.082472,-0.838659 -0.691079,-1.481578 0.382942,-0.62908 0.811768,-0.788285 2.316473,-0.860002 1.723669,-0.08217 1.89798,-0.01735 2.620932,0.976226 0.745869,1.025012 0.734355,1.082853 -0.312566,1.569655 -1.4849,0.69044 -2.561393,0.634555 -3.933735,-0.204227 z m 3.230342,-0.278811 c 0.730186,-0.32451 0.760632,-0.3855 0.129792,-0.259915 -0.641886,0.127786 -0.765478,0.03506 -0.558605,-0.419207 0.175749,-0.385833 -0.01418,-0.644887 -0.56039,-0.765281 -1.288692,-0.283965 -1.826139,0.241907 -1.128676,1.104307 0.715178,0.884223 0.846224,0.905271 2.117929,0.340096 z" />
+        <text
+           style="font-weight:bold;font-size:2.9647553px;font-family:Tahoma;text-anchor:middle;fill:#532e88;stroke:#000000;stroke-width:0"
+           xml:space="preserve"
+           stroke-linejoin="null"
+           stroke-linecap="null"
+           font-weight="bold"
+           font-size="2.4101px"
+           y="58.815685"
+           x="102.71754"
+           id="svg_ESAT">E.S.A.T</text>
+        <a
+           id="a5503"
+           xlink:title="Envoyer un Email vers l'imprimerie@escolore.org"
+           xlink:href="mailto:imprimerie@escolore.org"
+           transform="matrix(1.7347806,0,0,1.8973941,45.491471,-117.07832)">
+          <text
+             id="text5501"
+             xml:space="preserve"
+             style="font-weight:400;font-size:0.96393001px;line-height:116.95561409%;font-family:Tahoma;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;stroke-width:0.10351"
+             word-spacing="0px"
+             text-align="end"
+             letter-spacing="0px"
+             font-weight="400"
+             font-size=".96393px"
+             y="168.53951"
+             x="162.64864"
+             transform="scale(0.85897,1.1642)"><tspan
+               id="tspan5497"
+               y="83.49585"
+               x="78.253616"><tspan
+                 style="font-weight:400;font-size:0.96393001px;font-family:Tahoma;fill:#000000;stroke-width:0.10351"
+                 id="tspan5495"
+                 font-weight="400"
+                 font-size=".96393px"
+                 dy="0"
+                 dx="0" /></tspan><tspan
+               style="font-weight:700;font-size:2.07019997px;font-family:Tahoma;fill:#000000"
+               id="tspan5499"
+               font-weight="700"
+               font-size="2.0702px"
+               y="84.941078"
+               x="78.253616">Email : imprimerie@escolore.org </tspan></text>
+        </a>
+        <text
+           xml:space="preserve"
+           style="font-weight:400;font-size:1.35127985px;line-height:116.95561409%;font-family:Tahoma;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;stroke-width:0.1451049"
+           word-spacing="0px"
+           text-align="end"
+           letter-spacing="0px"
+           font-weight="400"
+           font-size=".96393px"
+           y="192.83089"
+           x="290.04855"
+           transform="scale(0.95363586,1.0486183)"
+           id="DocumentRenew"><tspan
+             style="stroke-width:0.1451049"
+             id="tspan5507"
+             y="73.612923"
+             x="171.73987"><tspan
+               style="font-weight:400;font-size:1.35127985px;font-family:Tahoma;fill:#000000;stroke-width:0.1451049"
+               id="tspan5505"
+               font-weight="400"
+               font-size=".96393px"
+               dy="0"
+               dx="0" /></tspan><tspan
+             style="font-weight:700;font-size:2.90209818px;font-family:Tahoma;fill:#000000;stroke-width:0.1451049"
+             id="tspan5509"
+             font-weight="700"
+             font-size="2.0702px"
+             y="75.638908"
+             x="171.73987">Document à conserver pour tout renouvellement de commande</tspan><tspan
+             style="font-weight:700;font-size:2.90209818px;font-family:Tahoma;fill:#000000;stroke-width:0.1451049"
+             id="tspan5511"
+             font-weight="700"
+             font-size="2.0702px"
+             y="75.638908"
+             x="171.73987" /></text>
+        <text
+           xml:space="preserve"
+           style="font-weight:400;font-size:6.77670336px;line-height:116.95561409%;font-family:Tahoma;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;stroke-width:0.72766948"
+           word-spacing="0px"
+           text-align="end"
+           letter-spacing="0px"
+           font-weight="400"
+           font-size="4.2694px"
+           y="681.99359"
+           x="729.32507"
+           transform="scale(1.3317539,0.75088948)"
+           id="Attention "><tspan
+             style="font-weight:700;font-size:14.55418301px;font-family:Tahoma;fill:#000000;stroke-width:0.72766948"
+             id="tspan5514"
+             font-weight="700"
+             font-size="9.1693px"
+             y="94.271301"
+             x="136.0025">!</tspan></text>
+        <g
+           style="font-family:Tahoma;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;stroke-width:0.45844001"
+           id="g5547"
+           word-spacing="0px"
+           letter-spacing="0px"
+           transform="matrix(0.23816473,0,0,0.29247673,184.23559,34.70172)">
+          <text
+             xml:space="preserve"
+             style="font-weight:400;font-size:4.26940012px;line-height:116.95561409%;text-align:end"
+             text-align="end"
+             font-weight="400"
+             font-size="4.2694px"
+             y="549.32227"
+             x="381.5105"
+             transform="scale(1.2551,0.79676)"
+             id="text5535"><tspan
+               style="font-weight:700;font-size:9.16930008px;font-family:Tahoma;fill:#000000;stroke-width:0.45844001"
+               id="tspan5533"
+               font-weight="700"
+               font-size="9.1693px"
+               y="179.05055"
+               x="7.7105813">À conserver</tspan></text>
+          <text
+             id="text5539"
+             xml:space="preserve"
+             style="font-weight:400;font-size:4.26940012px;line-height:116.95561409%;text-align:end"
+             text-align="end"
+             font-weight="400"
+             font-size="4.2694px"
+             y="559.00696"
+             x="389.63626"
+             transform="scale(1.2551,0.79676)"><tspan
+               style="font-weight:700;font-size:9.16930008px;font-family:Tahoma;fill:#000000;stroke-width:0.45844001"
+               id="tspan5537"
+               font-weight="700"
+               font-size="9.1693px"
+               y="188.7352"
+               x="15.836346">pour renouveler</tspan></text>
+          <text
+             id="text5545"
+             xml:space="preserve"
+             style="font-weight:700;font-size:9.16930008px;line-height:116.95561409%;text-align:end"
+             text-align="end"
+             font-weight="700"
+             font-size="9.1693px"
+             y="569.05829"
+             x="385.38239"
+             transform="scale(1.2551,0.79676)"><tspan
+               id="tspan5541"
+               y="198.78654"
+               x="11.582479"> la commande</tspan><tspan
+               id="tspan5543"
+               y="198.78654"
+               x="11.582479" /></text>
+        </g>
+        <a
+           transform="matrix(1.2301379,0,0,1.2301379,103.83294,-58.887139)"
+           id="a5410-2"
+           xlink:href="Tel:04 73 73 38 96">
+          <text
+             id="text5408-6"
+             xml:space="preserve"
+             style="font-weight:400;font-size:0.96393621px;line-height:116.95561409%;font-family:Tahoma;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;stroke-width:0.10351066"
+             word-spacing="0px"
+             text-align="end"
+             letter-spacing="0px"
+             font-weight="400"
+             font-size=".96393px"
+             y="169.32428"
+             x="140.42601"
+             transform="scale(0.85896447,1.1641925)"><tspan
+               style="stroke-width:0.10351066"
+               id="tspan5396-7"
+               y="84.280067"
+               x="56.030453"><tspan
+                 style="font-weight:400;font-size:0.96393621px;font-family:Tahoma;fill:#000000;stroke-width:0.10351066"
+                 id="tspan5394-4"
+                 font-weight="400"
+                 font-size=".96393px"
+                 dy="0"
+                 dx="0" /></tspan><tspan
+               style="font-weight:700;font-size:2.07021332px;font-family:Tahoma;fill:#000000;stroke-width:0.10351066"
+               id="tspan5406-4"
+               font-weight="700"
+               font-size="2.0702px"
+               y="85.725311"
+               x="56.030453">Fax.: 04 7 73 38 88</tspan></text>
+        </a>
+        <text
+           id="AJOINDRE"
+           transform="scale(0.93847923,1.0655537)"
+           x="292.79318"
+           y="193.11638"
+           font-size=".96393px"
+           font-weight="400"
+           letter-spacing="0px"
+           text-align="end"
+           word-spacing="0px"
+           style="font-weight:400;font-size:1.32980323px;line-height:116.95561409%;font-family:Tahoma;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;stroke-width:0.14279866"
+           xml:space="preserve"><tspan
+             x="176.36487"
+             y="77.786987"
+             font-size="2.0702px"
+             font-weight="700"
+             id="tspan5583"
+             style="font-weight:700;font-size:2.85597348px;font-family:Tahoma;fill:#000000;stroke-width:0.14279866">A joindre IMPERATIVEMENT dûment remplie pour Valider celle-ci !</tspan></text>
+        <text
+           id="AJOINDRE-5"
+           transform="scale(1.4530839,0.68819151)"
+           x="272.14468"
+           y="267.40781"
+           font-size=".96393px"
+           font-weight="400"
+           letter-spacing="0px"
+           text-align="end"
+           word-spacing="0px"
+           style="font-weight:400;font-size:1.63066125px;line-height:116.95561409%;font-family:Tahoma;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;stroke-width:0.1751058"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.50210285px;font-family:Tahoma;-inkscape-font-specification:'Tahoma, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.1751058"
+             x="129.37529"
+             y="125.98602"
+             font-size="2.0702px"
+             font-weight="700"
+             id="tspan5583-6">Les enveloppes envoyées sans ce document et ne</tspan></text>
+        <text
+           id="AJOINDRE-5-3"
+           transform="scale(1.4135337,0.70744688)"
+           x="272.18054"
+           y="263.97861"
+           font-size=".96393px"
+           font-weight="400"
+           letter-spacing="0px"
+           text-align="end"
+           word-spacing="0px"
+           style="font-weight:400;font-size:1.58627796px;line-height:116.95561409%;font-family:Tahoma;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;stroke-width:0.17033978"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.4067781px;font-family:Tahoma;-inkscape-font-specification:'Tahoma, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.17033978"
+             x="133.29709"
+             y="126.40603"
+             font-size="2.0702px"
+             font-weight="700"
+             id="tspan5583-6-9">pouvant être identifiées comme la propriété du client</tspan></text>
+        <text
+           id="AJOINDRE-5-3-2"
+           transform="scale(1.4379242,0.69544695)"
+           x="272.33151"
+           y="272.74692"
+           font-size=".96393px"
+           font-weight="400"
+           letter-spacing="0px"
+           text-align="end"
+           word-spacing="0px"
+           style="font-weight:400;font-size:1.61364913px;line-height:116.95561409%;font-family:Tahoma;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;stroke-width:0.17327899"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.46559739px;font-family:Tahoma;-inkscape-font-specification:'Tahoma, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.17327899"
+             x="132"
+             y="132.80061"
+             font-size="2.0702px"
+             font-weight="700"
+             id="tspan5583-6-9-1">pourront être réexpédiées sans impressions afin de </tspan></text>
+        <text
+           id="AJOINDRE-5-3-2-5"
+           transform="scale(1.4054094,0.71153643)"
+           x="271.54077"
+           y="270.69772"
+           font-size=".96393px"
+           font-weight="400"
+           letter-spacing="0px"
+           text-align="end"
+           word-spacing="0px"
+           style="font-weight:400;font-size:1.57716072px;line-height:116.95561409%;font-family:Tahoma;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;stroke-width:0.16936076"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.38719749px;font-family:Tahoma;-inkscape-font-specification:'Tahoma, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.16936076"
+             x="135"
+             y="133.91586"
+             font-size="2.0702px"
+             font-weight="700"
+             id="tspan5583-6-9-1-5">limiter des risques d'erreur d'attribution et la taille de </tspan></text>
+        <text
+           id="AJOINDRE-5-3-2-5-6"
+           transform="scale(1.4133563,0.70753568)"
+           x="247.998"
+           y="276.09744"
+           font-size=".96393px"
+           font-weight="400"
+           letter-spacing="0px"
+           text-align="end"
+           word-spacing="0px"
+           style="font-weight:400;font-size:1.58607864px;line-height:116.95561409%;font-family:Tahoma;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;stroke-width:0.17031839"
+           xml:space="preserve"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.40637493px;font-family:Tahoma;-inkscape-font-specification:'Tahoma, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:end;writing-mode:lr-tb;text-anchor:end;fill:#000000;stroke-width:0.17031839"
+             x="109.13197"
+             y="138.54219"
+             font-size="2.0702px"
+             font-weight="700"
+             id="tspan5583-6-9-1-5-3">notre stock d'impressions en attente.</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
+</div>
+
+<!--the end --->
+
+</form>
+</div>
+
+</body>
+</html>
